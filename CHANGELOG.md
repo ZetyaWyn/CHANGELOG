@@ -1,5 +1,40 @@
 # Changelog
 
+## 2026-09-08
+
+### android_device_xiaomi_garnet
+
+- b1463be garnet: camera: Set torch default strength level to max
+
+### proprietary_vendor_xiaomi_garnet
+
+- No new commits.
+
+### android_device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### proprietary_vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- c1680dd dolby: Update translation contributors list
+- f69bc39 dolby: Redesign UI with Material 3 Expressive colors
+- 7718e7a dolby: Add AutoEQ headphone correction profiles contributor entry
+- f5c0c9d dolby: Add persian translations
+- 9cbd69d dolby: Redesign main card banner with Dolby logo
+- d6969aa dolby: Add per-band fine tuner to equalizer
+- d306248 dolby: Add Vietnamese translations
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/Fleur-Project/android_kernel_xiaomi_sm7435/commits/lineage-23.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/Fleur-Project/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
 ## 2026-09-01
 
 ### android_device_xiaomi_garnet
