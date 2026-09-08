@@ -16,17 +16,17 @@ fi
 
 SINCE=()
 if [ -f "$OUT" ]; then
-  SINCE=(--since="24 hours ago")
+  SINCE=(--since="7 days ago")
 fi
 
 HAS_COMMITS=0
 
 {
-  for REPO in android_device_xiaomi_garnet proprietary_vendor_xiaomi_garnet android_device_xiaomi_garnet-miuicamera proprietary_vendor_xiaomi_garnet-miuicamera hardware_dolby; do
+  for REPO in device_xiaomi_garnet vendor_xiaomi_garnet device_xiaomi_garnet-miuicamera vendor_xiaomi_garnet-miuicamera hardware_dolby; do
     echo "### $REPO"
     echo
     git clone --quiet --no-checkout --single-branch --filter=blob:none \
-      "https://github.com/Fleur-Project/$REPO" "$TMP/$REPO"
+      "https://github.com/project-sm7435/$REPO" "$TMP/$REPO"
     LOG=$(git -C "$TMP/$REPO" log --oneline "${SINCE[@]}")
     if [ -n "$LOG" ]; then
       echo "$LOG" | sed 's/^/- /'
@@ -39,11 +39,11 @@ HAS_COMMITS=0
 
   echo "### Kernel"
   echo
-  echo "- [android_kernel_xiaomi_sm7435](https://github.com/Fleur-Project/android_kernel_xiaomi_sm7435/commits/lineage-23.2/)"
+  echo "- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)"
   echo
   echo "### Kernel Modules"
   echo
-  echo "- [android_kernel_xiaomi_sm7435-modules](https://github.com/Fleur-Project/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)"
+  echo "- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)"
 } > "$SECTION"
 
 if [ "$HAS_COMMITS" -eq 0 ]; then
