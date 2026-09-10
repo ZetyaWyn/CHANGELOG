@@ -4,8 +4,8 @@
 
 ### vendor_xiaomi_garnet
 
-- d54f67b garnet: vendor: Set KGSL default power level
-
+- No new commits.
+  
 ### device_xiaomi_garnet-miuicamera
 
 - No new commits.
@@ -16,17 +16,7 @@
 
 ### hardware_dolby
 
-- dcbb0fe dolby: enable UDC/AC4 software codecs
-- c36a343 dolby: link blobs against v33 libstagefright_foundation
-- 53c54cb dolby: Redesign UI with Material 3 Expressive colors
-- 5fa80a1 dolby: Add AutoEQ headphone correction profiles contributor entry
-- c9d9b8a dolby: Add persian translations
-- d7c39aa dolby: Redesign main card banner with Dolby logo
-- 126bd27 dolby: Add per-band fine tuner to equalizer
-- 810e555 dolby: Revert offline AutoEQ and restore online profile fetching
-- f81c32d dolby: Implement per-device audio memory and offline AutoEQ engine
-- e854e91 dolby: Import DAX config from Sony PDX245
-- dfa94d6 dolby: Add DSEE audio enhancement
+- No new commits.
 
 ### Kernel
 
