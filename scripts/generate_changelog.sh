@@ -16,7 +16,7 @@ fi
 
 SINCE=()
 if [ -f "$OUT" ]; then
-  SINCE=(--since="7 days ago")
+  SINCE=(--since="24 hours ago")
 fi
 
 HAS_COMMITS=0
