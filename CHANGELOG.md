@@ -2,22 +2,6 @@
 
 ## 2026-09-10
 
-### device_xiaomi_garnet
-
-- b7421fb garnet: camera: Set torch default strength level to max
-- ae555e1 garnet: props: Disable unnecessary logging
-- ee48995 garnet: debloat: Drop jelly app
-- eb58e1b garnet: rootdir: Use foreground cpuset/uclamp for gralloc Makes sure rendering has enough capacity.
-- 4dd95bb garnet: rootdir: Use foreground uclamp for hwcomposer Matches SF, makes sure rendering always has enough capacity.
-- bb82f78 garnet: props: Disable ADPF CPU hint
-- 4af7ce0 garnet: audio: Route spatial output to Bluetooth
-- 21aaace garnet: power: Add CPU GPU performance power hints
-- 65069b7 garnet: audio: Add DSEE effect
-- 470776a garnet: Remove lineage dependencies
-- 438dc66 garnet: audio: Fix overly loud notification sound
-- 92ce243 garnet: Implement torch light control
-- 29fa733 garnet: rootdir: Don't configure zram in QCOM's init post boot script
-
 ### vendor_xiaomi_garnet
 
 - d54f67b garnet: vendor: Set KGSL default power level
