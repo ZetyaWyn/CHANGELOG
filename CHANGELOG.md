@@ -1,5 +1,36 @@
 ## 2026-09-08
 
+## 2026-09-13
+
+### device_xiaomi_garnet
+
+- No new commits.
+
+### vendor_xiaomi_garnet
+
+- 06ce54a garnet: Drop 32-bit performance libraries
+- f3ba795 garnet: Drop 32 Libs
+- bcecc4f garnet: Restore eUICC mirilhook from 35d1c0f
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
 ## 2026-09-10
 
 ### vendor_xiaomi_garnet
