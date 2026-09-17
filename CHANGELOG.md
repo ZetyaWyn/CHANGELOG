@@ -4,8 +4,7 @@
 
 ### device_xiaomi_garnet
 
-- b2a5e48 garnet: Allow to enable/disable ESIM (eUICC)
-
+- No new commits.
 ### vendor_xiaomi_garnet
 
 - No new commits.
