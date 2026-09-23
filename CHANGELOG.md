@@ -1,5 +1,34 @@
 ## 2026-09-08
 
+## 2026-09-23
+
+### device_xiaomi_garnet
+
+- f81c046 garnet: Update Axion flags
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
 ## 2026-09-15
 
 ### device_xiaomi_garnet
