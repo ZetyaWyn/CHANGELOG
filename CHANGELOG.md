@@ -1,5 +1,50 @@
 
 ## 2026-09-29
+## 2026-10-10
+
+### device_xiaomi_garnet
+
+- 270868d garnet: "sepolicy: Allow hal_power_default to write to cpu_dma_latency"
+- 8c0b475 garnet: Disable QCOM system daemon
+- 8782dd3 garnet: Remove APP_START and SYSTEM_UI power hints
+- 0ea7929 garnet: sepolicy: Grant system_app access to hal_mlipay_hwservice
+- 7b52176 garnet: Add com.android.bluetooth context to seapp_contexts
+- 376640d [TMP] garnet: Disable PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS
+- 91d20c2 garnet: Add Axion power mode hints
+- 48593f9 garnet: sepolicy: Allow system_server to write to audioserver_tmpfs
+- 268ff12 garnet: sepolicy: Add sys_nice capability to hal_fingerprint_default
+- 0f59c87 garnet: sepolicy: Label missing sysfs_wakeup nodes
+- 2c7c2e6 garnet: sepolicy: Allow system_suspend to read sysfs_wakeup files
+- f9e428a garnet: power: Set GPUMinFreq 650MHz & GPUMaxFreq 940MHz on EXPENSIVE_RENDERING
+- 7e4d2be garnet: powerhint: Refine performance hints for various scenarios
+- b6c64d3 Revert "garnet: Drop new powerhint by qcom configs"
+- b0b3fa8 Revert "garnet: power: Add CPU GPU performance power hints"
+- 353ad9c Reapply "garnet: power: Remove CPU GPU performance hints
+- 8eb301b garnet: Add SELinux rules for GNSS and read-ahead
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
 
 ### device_xiaomi_garnet
 
