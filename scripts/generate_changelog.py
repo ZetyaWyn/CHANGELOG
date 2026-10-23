@@ -50,6 +50,53 @@ def parse_body(body):
     return data
 
 
+BULLET = re.compile(r"^- ([0-9a-f]{7,40}) (.*)$")
+
+
+def sha_seen(sha, known):
+    """Abbreviated SHAs can change length as a repo grows, so match by prefix."""
+    return any(k.startswith(sha) or sha.startswith(k) for k in known)
+
+
+def merge_duplicate_dates(sections):
+    """Collapse repeated '## date' headings into one section, dropping repeated SHAs."""
+    order, bodies = [], {}
+    for d, b in sections:
+        if d not in bodies:
+            order.append(d)
+        bodies.setdefault(d, []).append(b)
+    merged = []
+    for d in order:
+        if len(bodies[d]) == 1:
+            merged.append((d, bodies[d][0]))
+            continue
+        data, seen = {}, set()
+        for b in bodies[d]:
+            for repo, lines in parse_body(b).items():
+                for l in lines:
+                    m = BULLET.match(l)
+                    key = m.group(1) if m else l
+                    if not sha_seen(key, seen):
+                        seen.add(key)
+                        data.setdefault(repo, []).append(l)
+        merged.append((d, render(d, data).split("\n", 2)[2].strip("\n")))
+    return merged
+
+
+def check(text):
+    """Return a list of problems: duplicate date headings or duplicate SHAs."""
+    problems = []
+    dates = re.findall(r"(?m)^## (\d{4}-\d{2}-\d{2})\s*$", text)
+    problems += [f"duplicate section: {d}" for d in sorted({d for d in dates if dates.count(d) > 1})]
+    shas = [m.group(1) for l in text.splitlines() if (m := BULLET.match(l))]
+    seen = []
+    for sha in shas:
+        if sha_seen(sha, seen):
+            problems.append(f"duplicate commit: {sha}")
+        seen.append(sha)
+    return problems
+
+
 def render(date, data):
     out = [f"## {date}", ""]
     for repo in REPOS:
@@ -67,7 +114,21 @@ def render(date, data):
 def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     text = OUT.read_text() if OUT.exists() else ""
-    sections = split_sections(text)
+    if "--check" in sys.argv:
+        problems = check(text)
+        print("\n".join(problems) if problems else "CHANGELOG OK: no duplicates.")
+        return 1 if problems else 0
+    sections = merge_duplicate_dates(split_sections(text))
+
+    # Everything already written anywhere in the file, so nothing is listed twice.
+    known_shas, known_subjects = [], {}
+    for _, body in sections:
+        for repo, lines in parse_body(body).items():
+            for l in lines:
+                m = BULLET.match(l)
+                if m:
+                    known_shas.append(m.group(1))
+                    known_subjects.setdefault(repo, set()).add(m.group(2))
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     # Fallback window for repos with no saved SHA yet: since latest changelog date.
     fallback = sections[0][0] if sections else None
@@ -82,22 +143,36 @@ def main():
             last = state.get(repo)
             if last == head:
                 continue
+            exact = True    # True: SHA range is authoritative
             if last:
                 try:
                     log = git("log", "--oneline", f"{last}..{head}", cwd=dest)
                 except subprocess.CalledProcessError:   # force-push / rewritten history
-                    log = git("log", "--oneline", "-n", "20", cwd=dest)
+                    log, exact = git("log", "--oneline", "-n", "20", cwd=dest), False
             elif fallback:
-                log = git("log", "--oneline", f"--since={fallback}T00:00:00Z", cwd=dest)
+                log, exact = git("log", "--oneline", f"--since={fallback}T00:00:00Z", cwd=dest), False
             else:
-                log = git("log", "--oneline", "--since=24 hours ago", cwd=dest)
+                log, exact = git("log", "--oneline", "--since=24 hours ago", cwd=dest), False
             new_state[repo] = head
-            if log:
-                new[repo] = [f"- {l}" for l in log.splitlines()]
+            lines = []
+            for l in log.splitlines():
+                sha, _, subject = l.partition(" ")
+                if sha_seen(sha, known_shas):
+                    continue                      # already in the changelog
+                if not exact and subject in known_subjects.get(repo, ()):
+                    continue                      # rebased copy of a listed commit
+                lines.append(f"- {l}")
+            if lines:
+                new[repo] = lines
 
     if not new:
+        if check(text):               # repair a file that already has duplicates
+            blocks = [f"## {d}\n\n{b}" for d, b in sections]
+            OUT.write_text(TITLE + "\n\n" + "\n\n".join(blocks).rstrip() + "\n")
+            print("Merged duplicate sections.")
+        else:
+            print("No new commits.")
         STATE.write_text(json.dumps(new_state, indent=2) + "\n")
-        print("No new commits.")
         return
 
     # Merge into today's section (new commits on top) or create it.
@@ -110,7 +185,12 @@ def main():
         data[repo] = lines + [l for l in data.get(repo, []) if l not in lines]
 
     blocks = [render(today, data)] + [f"## {d}\n\n{b}" for d, b in rest]
-    OUT.write_text(TITLE + "\n\n" + "\n\n".join(blocks).rstrip() + "\n")
+    result = TITLE + "\n\n" + "\n\n".join(blocks).rstrip() + "\n"
+    problems = check(result)
+    if problems:                      # never write a file with duplicates
+        print("Refusing to write, duplicates found:\n" + "\n".join(problems))
+        return 1
+    OUT.write_text(result)
     STATE.write_text(json.dumps(new_state, indent=2) + "\n")
     print("Updated:", ", ".join(new))
 

@@ -23,6 +23,9 @@ jobs:
       - name: Generate CHANGELOG.md
         run: python3 scripts/generate_changelog.py
 
+      - name: Check for duplicates
+        run: python3 scripts/generate_changelog.py --check
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
