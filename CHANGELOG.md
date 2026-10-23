@@ -63,8 +63,6 @@
 
 ### vendor_xiaomi_garnet
 
-- 82c3d58 garnet:Update thermal-normal.conf
-- 7aafb19 Update thermal-normal.conf
 - abde6a4 garnet: Drop 32-bit performance libraries
 - 0e72218 garnet: Drop 32 Libs
 - f84f439 garnet: Restore eUICC mirilhook from 35d1c0f
