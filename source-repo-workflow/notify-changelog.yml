@@ -1,0 +1,15 @@
+# Put this in .github/workflows/ of EACH source repo.
+# Needs a secret CHANGELOG_PAT (fine-grained PAT, Contents: read/write on the CHANGELOG repo).
+name: Notify changelog
+on:
+  push:
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -fsS -X POST \
+            -H "Authorization: Bearer ${{ secrets.CHANGELOG_PAT }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/project-sm7435/CHANGELOG/dispatches \
+            -d '{"event_type":"source-updated"}'

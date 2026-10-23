@@ -1,18 +1,34 @@
+# Changelog
 
-## 2026-09-29
 ## 2026-10-23
 
 ### device_xiaomi_garnet
 
-- 369d7d3 garnet: parts: Enable predictive back gestures
-- 94c1cf7 garnet: parts: Refine UI
-- af46a81 garnet: parts: Move GameBar strings to resources and translate
-- a7ba289 garnet: parts: Apply expressive design style
-- bfaa348 garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
-- 49119c2 garnet: sepolicy: Allow init/vold to write storage sysfs parameters
-- 4ad39ee garnet: sepolicy: Allow system_app to access zram sysfs nodes
-- 61588ba garnet: sepolicy: Dontaudit camera hal default_prop
-- 5297264 garnet: sepolicy: Fix Power HAL permissions
+- 4ccb177 garnet: rootdir: Do not allow foreground tasks to run on CPU7
+- 8193dd6 garnet: rootdir: Move background cpuset to CPU0-1
+- 3955cf2 garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
+- c020e2d garnet: sepolicy: Update power HAL permissions
+- c1baf8c garnet: props: Set debug.sf.layer_caching_active_layer_timeout_ms to 1000
+- 0012aa7 garnet: Enable AOSP surfaceflinger
+- 7a8abcf garnet: overlay: Remove PowerProfile.POWER_NONE
+- 072fc9d garnet: Disable continuous transaction tracing on all build types
+- 6889c8f garnet: disable verbose camera logs
+- 43cf0a7 garnet: Set sensors logging level to warn
+- 27caff4 garnet: Kill log spam in logcat from SensorService
+- 4c3b625 garnet: Silence some spammy logging
+- 58a5a74 garnet: Add props to improve battery backup
+- 0c59a9f garnet: props: Disable Logs
+- 43a00c1 garnet: power: rework powerhint boosts and camera hints
+- 5a7ecee garnet: Drop bypass charging and update translations
+- ad81582 garnet: parts: Enable predictive back gestures
+- d039fd5 garnet: parts: Refine UI
+- c87f23a garnet: parts: Move GameBar strings to resources and translate
+- 5046931 garnet: parts: Apply expressive design style
+- ef314ce garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
+- d90573c garnet: sepolicy: Allow init/vold to write storage sysfs parameters
+- 7c9841f garnet: sepolicy: Allow system_app to access zram sysfs nodes
+- 252a0ce garnet: sepolicy: Dontaudit camera hal default_prop
+- f0fbfa9 garnet: sepolicy: Fix Power HAL permissions
 - fdef539 Revert "garnet: Drop new powerhint by qcom configs"
 - d5b06e8 garnet: sepolicy: Label bluetooth props
 - 4ed9f70 garnet: sepolicy: Allow fingerprint HAL to access performance and sensor nodes
@@ -44,9 +60,19 @@
 - 18e96ac garnet: audio: Add hardware accelerated audio effect
 - 36a1503 garnet: Change to Arm64 Only
 - 0352f4b garnet: camera: Set torch default strength level to max
+- 369d7d3 garnet: parts: Enable predictive back gestures
+- 94c1cf7 garnet: parts: Refine UI
+- af46a81 garnet: parts: Move GameBar strings to resources and translate
+- a7ba289 garnet: parts: Apply expressive design style
+- bfaa348 garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
+- 49119c2 garnet: sepolicy: Allow init/vold to write storage sysfs parameters
+- 4ad39ee garnet: sepolicy: Allow system_app to access zram sysfs nodes
+- 61588ba garnet: sepolicy: Dontaudit camera hal default_prop
+- 5297264 garnet: sepolicy: Fix Power HAL permissions
 
 ### vendor_xiaomi_garnet
 
+- 7aafb19 Update thermal-normal.conf
 - abde6a4 garnet: Drop 32-bit performance libraries
 - 0e72218 garnet: Drop 32 Libs
 - f84f439 garnet: Restore eUICC mirilhook from 35d1c0f
@@ -74,6 +100,8 @@
 ### Kernel Modules
 
 - [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-10-10
 
 ### device_xiaomi_garnet
@@ -119,6 +147,7 @@
 ### Kernel Modules
 
 - [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
 
 ### device_xiaomi_garnet
 
