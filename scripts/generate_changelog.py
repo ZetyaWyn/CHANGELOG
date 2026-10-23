@@ -94,7 +94,40 @@ def check(text):
         if sha_seen(sha, seen):
             problems.append(f"duplicate commit: {sha}")
         seen.append(sha)
+    subjects = set()
+    for d, body in split_sections(text):
+        for repo, lines in parse_body(body).items():
+            for l in lines:
+                m = BULLET.match(l)
+                if m and (repo, m.group(2)) in subjects:
+                    problems.append(f"duplicate message in {repo}: {m.group(2)}")
+                elif m:
+                    subjects.add((repo, m.group(2)))
     return problems
+
+
+def dedupe(secs):
+    """secs: [(date, {repo: [bullets]})] newest first. Keep the first (newest)
+    occurrence of each commit message per repo; drop older repeats. Returns count removed."""
+    seen, removed = set(), 0
+    for _, data in secs:
+        for repo, lines in data.items():
+            kept = []
+            for l in lines:
+                m = BULLET.match(l)
+                key = (repo, m.group(2)) if m else None
+                if key and key in seen:
+                    removed += 1
+                    continue
+                if key:
+                    seen.add(key)
+                kept.append(l)
+            data[repo] = kept
+    return removed
+
+
+def write_all(secs):
+    OUT.write_text(TITLE + "\n\n" + "\n\n".join(render(d, x) for d, x in secs).rstrip() + "\n")
 
 
 def render(date, data):
@@ -119,6 +152,14 @@ def main():
         print("\n".join(problems) if problems else "CHANGELOG OK: no duplicates.")
         return 1 if problems else 0
     sections = merge_duplicate_dates(split_sections(text))
+    sections.sort(key=lambda x: x[0], reverse=True)          # newest first
+
+    if "--clean" in sys.argv:                                 # offline cleanup of existing file
+        secs = [(d, parse_body(b)) for d, b in sections]
+        removed = dedupe(secs)
+        write_all(secs)
+        print(f"Removed {removed} duplicate entries.")
+        return 0
 
     # Everything already written anywhere in the file, so nothing is listed twice.
     known_shas, known_subjects = [], {}
@@ -165,35 +206,32 @@ def main():
             if lines:
                 new[repo] = lines
 
-    if not new:
-        if check(text):               # repair a file that already has duplicates
-            blocks = [f"## {d}\n\n{b}" for d, b in sections]
-            OUT.write_text(TITLE + "\n\n" + "\n\n".join(blocks).rstrip() + "\n")
-            print("Merged duplicate sections.")
+    secs = [(d, parse_body(b)) for d, b in sections]
+    if new:
+        if secs and secs[0][0] == today:
+            data = secs[0][1]
         else:
-            print("No new commits.")
+            data = {}
+            secs.insert(0, (today, data))
+        for repo, lines in new.items():
+            data[repo] = lines + [l for l in data.get(repo, []) if l not in lines]
+    removed = dedupe(secs)
+
+    if not new and not removed and not check(text):
         STATE.write_text(json.dumps(new_state, indent=2) + "\n")
-        return
+        print("No new commits.")
+        return 0
 
-    # Merge into today's section (new commits on top) or create it.
-    if sections and sections[0][0] == today:
-        data = parse_body(sections[0][1])
-        rest = sections[1:]
-    else:
-        data, rest = {}, sections
-    for repo, lines in new.items():
-        data[repo] = lines + [l for l in data.get(repo, []) if l not in lines]
-
-    blocks = [render(today, data)] + [f"## {d}\n\n{b}" for d, b in rest]
-    result = TITLE + "\n\n" + "\n\n".join(blocks).rstrip() + "\n"
-    problems = check(result)
-    if problems:                      # never write a file with duplicates
-        print("Refusing to write, duplicates found:\n" + "\n".join(problems))
-        return 1
-    OUT.write_text(result)
+    write_all(secs)
+    problems = check(OUT.read_text())
     STATE.write_text(json.dumps(new_state, indent=2) + "\n")
-    print("Updated:", ", ".join(new))
+    if problems:
+        print("Duplicates remain:\n" + "\n".join(problems))
+        return 1
+    print("Updated:", ", ".join(new) or "none", f"| removed {removed} duplicates")
+    return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
+    
