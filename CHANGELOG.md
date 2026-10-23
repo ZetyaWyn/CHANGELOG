@@ -63,6 +63,7 @@
 
 ### vendor_xiaomi_garnet
 
+- 82c3d58 garnet:Update thermal-normal.conf
 - 7aafb19 Update thermal-normal.conf
 - abde6a4 garnet: Drop 32-bit performance libraries
 - 0e72218 garnet: Drop 32 Libs
