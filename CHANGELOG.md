@@ -60,15 +60,6 @@
 - 18e96ac garnet: audio: Add hardware accelerated audio effect
 - 36a1503 garnet: Change to Arm64 Only
 - 0352f4b garnet: camera: Set torch default strength level to max
-- 369d7d3 garnet: parts: Enable predictive back gestures
-- 94c1cf7 garnet: parts: Refine UI
-- af46a81 garnet: parts: Move GameBar strings to resources and translate
-- a7ba289 garnet: parts: Apply expressive design style
-- bfaa348 garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
-- 49119c2 garnet: sepolicy: Allow init/vold to write storage sysfs parameters
-- 4ad39ee garnet: sepolicy: Allow system_app to access zram sysfs nodes
-- 61588ba garnet: sepolicy: Dontaudit camera hal default_prop
-- 5297264 garnet: sepolicy: Fix Power HAL permissions
 
 ### vendor_xiaomi_garnet
 
@@ -107,64 +98,19 @@
 ### device_xiaomi_garnet
 
 - 270868d garnet: "sepolicy: Allow hal_power_default to write to cpu_dma_latency"
-- 8c0b475 garnet: Disable QCOM system daemon
 - 8782dd3 garnet: Remove APP_START and SYSTEM_UI power hints
-- 0ea7929 garnet: sepolicy: Grant system_app access to hal_mlipay_hwservice
 - 7b52176 garnet: Add com.android.bluetooth context to seapp_contexts
-- 376640d [TMP] garnet: Disable PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS
 - 91d20c2 garnet: Add Axion power mode hints
-- 48593f9 garnet: sepolicy: Allow system_server to write to audioserver_tmpfs
-- 268ff12 garnet: sepolicy: Add sys_nice capability to hal_fingerprint_default
-- 0f59c87 garnet: sepolicy: Label missing sysfs_wakeup nodes
-- 2c7c2e6 garnet: sepolicy: Allow system_suspend to read sysfs_wakeup files
 - f9e428a garnet: power: Set GPUMinFreq 650MHz & GPUMaxFreq 940MHz on EXPENSIVE_RENDERING
 - 7e4d2be garnet: powerhint: Refine performance hints for various scenarios
-- b6c64d3 Revert "garnet: Drop new powerhint by qcom configs"
 - b0b3fa8 Revert "garnet: power: Add CPU GPU performance power hints"
 - 353ad9c Reapply "garnet: power: Remove CPU GPU performance hints
-- 8eb301b garnet: Add SELinux rules for GNSS and read-ahead
-
-### vendor_xiaomi_garnet
-
-- No new commits.
-
-### device_xiaomi_garnet-miuicamera
-
-- No new commits.
-
-### vendor_xiaomi_garnet-miuicamera
-
-- No new commits.
-
-### hardware_dolby
-
-- No new commits.
-
-### Kernel
-
-- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
-
-### Kernel Modules
-
-- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
-
-
-### device_xiaomi_garnet
-
 - ebfcc60 garnet: Load cpq module at boot
-- 49e89c3 garnet: rootdir: Set swappiness to 60
 - ca474fa garnet: Add camera info init props
 - be0f774 garnet: Grant GPU sysfs access for kernel manager and diagnostics
-- 6483174 garnet: include axion common soc_map
-- d125518 garnet: rootdir: Remove IO read_ahead_kb tune
-- 51a42de garnet: init: Give proper permissions for /dev/diag
-- 23766b4 garnet: Update Axion flags
 
 ### vendor_xiaomi_garnet
 
-- 231d607 garnet: Drop 32-bit performance libraries
-- 1c79a1d garnet: Drop 32 Libs
-- 5452447 garnet: Restore eUICC mirilhook from 35d1c0f
 - 56c22cb garnet: vendor: Set KGSL default power level
 - 951c8e1 garnet: init: Reset readahead values for 128 always
 - 47b12df garnet: Don't configure zram in post boot scripts
