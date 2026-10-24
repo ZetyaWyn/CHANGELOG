@@ -4,6 +4,8 @@
 
 ### device_xiaomi_garnet
 
+- 37b9c42 garnet: Update from OS3.0.302.0.WNRMIXM
+- 56c5e19 garnet: Update from OS3.0.301.0.WNRMIXM
 - 3ed90ed garnet: Enable AOSP surfaceflinger
 - 06bd70a garnet: rootdir: Do not allow foreground tasks to run on CPU7
 - 6724403 garnet: rootdir: Move background cpuset to CPU0-1
