@@ -1,23 +1,53 @@
 # Changelog
 
+## 2026-10-24
+
+### device_xiaomi_garnet
+
+- 06bd70a garnet: rootdir: Do not allow foreground tasks to run on CPU7
+- 6724403 garnet: rootdir: Move background cpuset to CPU0-1
+- 2c8c8be garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
+- ccccb21 garnet: sepolicy: Update power HAL permissions
+- 70d4606 garnet: overlay: Remove PowerProfile.POWER_NONE
+- 53eb86a garnet: Disable continuous transaction tracing on all build types
+- 6164218 garnet: disable verbose camera logs
+- a52fd10 garnet: Set sensors logging level to warn
+- 5ec1c96 garnet: Kill log spam in logcat from SensorService
+- a059507 garnet: Silence some spammy logging
+- 36bccd7 garnet: Add props to improve battery backup
+- 08c3b4d garnet: props: Disable Logs
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-10-23
 
 ### device_xiaomi_garnet
 
-- 4ccb177 garnet: rootdir: Do not allow foreground tasks to run on CPU7
-- 8193dd6 garnet: rootdir: Move background cpuset to CPU0-1
-- 3955cf2 garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
-- c020e2d garnet: sepolicy: Update power HAL permissions
 - c1baf8c garnet: props: Set debug.sf.layer_caching_active_layer_timeout_ms to 1000
 - 0012aa7 garnet: Enable AOSP surfaceflinger
-- 7a8abcf garnet: overlay: Remove PowerProfile.POWER_NONE
-- 072fc9d garnet: Disable continuous transaction tracing on all build types
-- 6889c8f garnet: disable verbose camera logs
-- 43cf0a7 garnet: Set sensors logging level to warn
-- 27caff4 garnet: Kill log spam in logcat from SensorService
-- 4c3b625 garnet: Silence some spammy logging
-- 58a5a74 garnet: Add props to improve battery backup
-- 0c59a9f garnet: props: Disable Logs
 - 43a00c1 garnet: power: rework powerhint boosts and camera hints
 - 5a7ecee garnet: Drop bypass charging and update translations
 - ad81582 garnet: parts: Enable predictive back gestures
