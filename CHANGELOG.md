@@ -20,7 +20,8 @@
 
 ### vendor_xiaomi_garnet
 
-- No new commits.
+- 5de2d90 garnet: Update from OS3.0.302.0.WNRMIXM
+- 075775b garnet: Update from OS3.0.301.0.WNRMIXM
 
 ### device_xiaomi_garnet-miuicamera
 
