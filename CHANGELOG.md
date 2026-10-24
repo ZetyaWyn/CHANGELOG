@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- 3ed90ed garnet: Enable AOSP surfaceflinger
 - 06bd70a garnet: rootdir: Do not allow foreground tasks to run on CPU7
 - 6724403 garnet: rootdir: Move background cpuset to CPU0-1
 - 2c8c8be garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
@@ -47,7 +48,6 @@
 ### device_xiaomi_garnet
 
 - c1baf8c garnet: props: Set debug.sf.layer_caching_active_layer_timeout_ms to 1000
-- 0012aa7 garnet: Enable AOSP surfaceflinger
 - 43a00c1 garnet: power: rework powerhint boosts and camera hints
 - 5a7ecee garnet: Drop bypass charging and update translations
 - ad81582 garnet: parts: Enable predictive back gestures
