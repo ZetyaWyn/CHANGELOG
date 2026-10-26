@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- 3cdfe2e garnet: Drop KProfile
 - 5a81cc8 garnet: power: Rework powerhint and add FLING/UI_ANIMATION
 
 ### vendor_xiaomi_garnet
