@@ -4,6 +4,8 @@
 
 ### device_xiaomi_garnet
 
+- 95ad1ff garnet: Enable SurfaceFlinger's display power timer
+- 24664a0 garnet: opt into legacy UDFPS enroll UI
 - 948d974 garnet: Update from OS3.0.304.0.WNRMIXM
 - 25d3f83 garnet: Update from OS3.0.302.0.WNRMIXM
 - c0c6edc garnet: Remove lineage dependencies
@@ -171,7 +173,7 @@
 
 ### vendor_xiaomi_garnet
 
-- No new commits.
+- 90fba89 garnet: Update from OS3.0.304.0.WNRMIXM
 
 ### device_xiaomi_garnet-miuicamera
 
@@ -183,7 +185,8 @@
 
 ### hardware_dolby
 
-- No new commits.
+- 290553f dolby: Switch to compact navbar design
+- f85fe5f Dolby: fix bass/EQ handling, snapshots and app profile monitor
 
 ### Kernel
 

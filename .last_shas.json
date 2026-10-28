@@ -1,7 +1,7 @@
 {
-  "device_xiaomi_garnet": "948d9748915dac66c571c8266cf8707a3b49d777",
-  "vendor_xiaomi_garnet": "5de2d906ec5889041bb481f78bc447b0258b8a53",
+  "device_xiaomi_garnet": "95ad1ffd6d0ccac732faaae299ebc0f34863624d",
+  "vendor_xiaomi_garnet": "90fba89b4f8b41781a3a93347e76b6215817dfc3",
   "device_xiaomi_garnet-miuicamera": "e66aa5665d7e001893ff232e8503c767a5b99cfe",
   "vendor_xiaomi_garnet-miuicamera": "46384077a18cf1bf6a1a2fb9ebe3c0d7c93df372",
-  "hardware_dolby": "2bc1ef4b08be98b35c8165c057649e8707c957a6"
+  "hardware_dolby": "290553f72b8996f76b2fb628b5d248f054ae6a15"
 }
