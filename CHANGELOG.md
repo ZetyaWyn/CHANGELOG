@@ -157,7 +157,26 @@
 
 ### vendor_xiaomi_garnet
 
-- No new commits.
+- e0663c4 garnet: Update from OS3.0.304.0.WNRMIXM
+- e6fa007 garnet: update shared_libs for greatwhite driver
+- d013a75 garnet: Update shared libraries
+- b6a97ce garnet: update GPU driver blobs from greatwhite V@0863.1
+- 126fc18 garnet: Drop 32 Libs
+- b25b8f7 garnet: Restore eUICC mirilhook from 35d1c0f
+- 17ce437 garnet: init: Reset readahead values for 128 always
+- af066d9 garnet: Don't configure zram in post boot scripts
+- d5f9098 garnet: Import QCOM audio effects from OnePlus 9R
+- 8846cb5 garnet: switch default I/O scheduler to mq-deadline
+- 87e2aa2 garnet: Add missing Leica video filter
+- 2844c10 garnet: switch to deep suspend-to-RAM
+- 6e848fc garnet: Remove again QDESK and Qquard
+- abcfc84 garnet: expand WALT game list and enable lib mask force
+- 9c5525c garnet: Switch to LZ4KD
+- 5a8e300 garnet: Add missing GPU firmware
+- 2ff10e9 garnet: Add Dolby Media Codecs
+- 41540a1 vendor: drop C2
+- 09547dc garnet: tune scheduler, cpufreq and zram
+- db3651e garnet: Update from OS3.0.302.0.WNRMIXM
 
 ### device_xiaomi_garnet-miuicamera
 
@@ -169,7 +188,11 @@
 
 ### hardware_dolby
 
-- No new commits.
+- 26acfc2 dolby: Import translations from Crowdin
+- 42956d5 dolby: Merge LunarisDolby updates from Ghosuto
+- cac8371 dolby: Add missing library
+- 92b6737 configs: Remove legacy OMX aliases from Dolby Codec2 decoders
+- cf38fdb configs: Enable Dolby AC-4 decoding
 
 ### Kernel
 
@@ -238,7 +261,7 @@
 
 ### vendor_xiaomi_garnet
 
-- 90fba89 garnet: Update from OS3.0.304.0.WNRMIXM
+- No new commits.
 
 ### device_xiaomi_garnet-miuicamera
 
@@ -333,7 +356,6 @@
 
 ### vendor_xiaomi_garnet
 
-- 5de2d90 garnet: Update from OS3.0.302.0.WNRMIXM
 - 075775b garnet: Update from OS3.0.301.0.WNRMIXM
 
 ### device_xiaomi_garnet-miuicamera
@@ -374,8 +396,6 @@
 
 - 7c6b976 garnet: Update thermal-normal.conf
 - abde6a4 garnet: Drop 32-bit performance libraries
-- 0e72218 garnet: Drop 32 Libs
-- f84f439 garnet: Restore eUICC mirilhook from 35d1c0f
 
 ### device_xiaomi_garnet-miuicamera
 
@@ -418,21 +438,11 @@
 ### vendor_xiaomi_garnet
 
 - 56c22cb garnet: vendor: Set KGSL default power level
-- 951c8e1 garnet: init: Reset readahead values for 128 always
-- 47b12df garnet: Don't configure zram in post boot scripts
-- fafd217 garnet: switch to deep suspend-to-RAM
-- 2c21f42 garnet: Add missing Leica video filter
 - cdf26c9 garnet: add 32-bit Adreno Gpu libraries
 - bd67305 garnet: Update Adreno GPU V@0837.0.9 blobs
 - 1f3d1b2 garnet: tune reclaim watermark and swappiness for smoother UX
-- 0636b2f garnet: switch default I/O scheduler to mq-deadline
-- 1a7d5de garnet: Import QCOM audio effects from OnePlus 9R
 - ce2ad04 garnet: tune thermal normal profile for better battery life
 - 1ecac70 garnet: Rework thermal configuration
-- 2cd4c6b garnet: expand WALT game list and enable lib mask force
-- f3358c6 garnet: update shared_libs for greatwhite driver
-- 34b286a garnet: update GPU driver blobs from greatwhite V@0863.1
-- ccecf22 garnet: Remove again QDESK and Qquard
 
 ### device_xiaomi_garnet-miuicamera
 
