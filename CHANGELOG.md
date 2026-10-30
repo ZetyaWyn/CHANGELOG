@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- a6e3b51 garnet: Drop qesdk blobs
 - af5fcd4 garnet: parts: add charging bypass toggle Signed-off-by: ZetyaWyn <amruthv780@gmail.com>
 - 2ec2ed3 garnet: Bump super size to fix gapps errors
 - 0b280a7 garnet: Remove Force triple frame buffers
@@ -215,7 +216,6 @@
 ### device_xiaomi_garnet
 
 - 24664a0 garnet: opt into legacy UDFPS enroll UI
-- ba5b4b8 garnet: Drop qesdk blobs
 - 5faaaf0 garnet: Drop modemManager blobs
 - 037a16e garnet: Drop qguard blobs
 - 49f2e6c garnet: sepolicy: Label missing sysfs_wakeup nodes
