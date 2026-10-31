@@ -4,6 +4,8 @@
 
 ### device_xiaomi_garnet
 
+- cd331e0 garnet: sepolicy: allow hal_audio_default to access miev and set vendor_audio_prop
+- 7ec99e7 garnet: charging: fix label, temp units, charger perms
 - c4ba066 garnet: parts: Only override Dolby Vision HDR type
 
 ### vendor_xiaomi_garnet
