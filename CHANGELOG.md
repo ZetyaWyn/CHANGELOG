@@ -5,7 +5,6 @@
 ### device_xiaomi_garnet
 
 - a6e3b51 garnet: Drop qesdk blobs
-- af5fcd4 garnet: parts: add charging bypass toggle Signed-off-by: ZetyaWyn <amruthv780@gmail.com>
 - 2ec2ed3 garnet: Bump super size to fix gapps errors
 - 0b280a7 garnet: Remove Force triple frame buffers
 - 675e7df garnet: Add props to improve battery backup
