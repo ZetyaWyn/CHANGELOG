@@ -8,8 +8,8 @@
 
 ### vendor_xiaomi_garnet
 
-- eb9628d garnet: proprietary: Update thermal-normal.conf
-- 2888184 garnet: proprietary: Update Adreno blobs to v@837.0.9
+- abb894e garnet: proprietary: Update thermal-normal.conf
+- 8c1d494 garnet: proprietary: Update Adreno blobs to v@837.0.9
 
 ### device_xiaomi_garnet-miuicamera
 
