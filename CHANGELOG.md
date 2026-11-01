@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-11-01
+
+### device_xiaomi_garnet
+
+- No new commits.
+
+### vendor_xiaomi_garnet
+
+- eb9628d garnet: proprietary: Update thermal-normal.conf
+- 2888184 garnet: proprietary: Update Adreno blobs to v@837.0.9
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-10-31
 
 ### device_xiaomi_garnet
