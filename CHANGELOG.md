@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- 5dab9c9 garnet: Remove unnecessary dex2oat properties
 - ea3be8a Remove unnecessary dex2oat properties
 - e3d0051 garnet: properties: Enable VoLTE and VoWIFI for all carriers
 - fb02b84 garnet: overlay: Use 4G instead of LTE icon for save statusbar space
