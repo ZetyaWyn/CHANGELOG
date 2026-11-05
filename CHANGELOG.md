@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-11-05
+
+### device_xiaomi_garnet
+
+- ea3be8a Remove unnecessary dex2oat properties
+- e3d0051 garnet: properties: Enable VoLTE and VoWIFI for all carriers
+- fb02b84 garnet: overlay: Use 4G instead of LTE icon for save statusbar space
+- de4c1d9 garnet: Improve battery charging control with hysteresis
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-01
 
 ### device_xiaomi_garnet
