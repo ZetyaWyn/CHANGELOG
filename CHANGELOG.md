@@ -4,6 +4,28 @@
 
 ### device_xiaomi_garnet
 
+- 4edbeb5 garnet: init: grant Power HAL access to CPU scaling nodes
+- 667ef19 garnet: sepolicy: allow power HAL to access performance interfaces
+- 302e5db garnet: sepolicy: allow power HAL to access cpu_dma_latency
+- df97aae garnet: sepolicy: Allow hal_power_default to read graphics sysfs
+- ddfb5e7 garnet: sepolicy: Add missing proc_vm type
+- 21dc338 garnet: Remove unnecessary dex2oat properties
+- ea6169c garnet: properties: Enable VoLTE and VoWIFI for all carriers
+- 0adbf28 garnet: overlay: Use 4G instead of LTE icon for save statusbar space
+- a136f5c garnet: Improve battery charging control with hysteresis
+- c197e54 garnet: sepolicy: allow hal_audio_default to access miev and set vendor_audio_prop
+- a4ea3ec garnet: charging: fix label, temp units, charger perms
+- 7f0a3fe garnet: parts: Only override Dolby Vision HDR type
+- 4724b3d garnet: Drop qesdk blobs
+- ea105b4 garnet: Bump super size to fix gapps errors
+- 510486d garnet: Remove Force triple frame buffers
+- 58a5c2d garnet: Add props to improve battery backup
+- d8e0485 garnet: Enable SurfaceFlinger's display power timer
+- 3732c9d garnet: Update from OS3.0.304.0.WNRMIXM
+- dcb33a4 garnet: Update from OS3.0.302.0.WNRMIXM
+- 373472a garnet: Remove lineage dependencies
+- d14740b garnet: Grant GPU sysfs access for kernel manager and diagnostics
+- 76ee9ed garnet: init: Read camera sensor for proper about phone camera description
 - 2bb23f4 garnet: Update CPU permissions and clean up sepolicy
 
 ### vendor_xiaomi_garnet
@@ -38,11 +60,7 @@
 
 ### device_xiaomi_garnet
 
-- 5dab9c9 garnet: Remove unnecessary dex2oat properties
 - ea3be8a Remove unnecessary dex2oat properties
-- e3d0051 garnet: properties: Enable VoLTE and VoWIFI for all carriers
-- fb02b84 garnet: overlay: Use 4G instead of LTE icon for save statusbar space
-- de4c1d9 garnet: Improve battery charging control with hysteresis
 
 ### vendor_xiaomi_garnet
 
@@ -105,9 +123,7 @@
 
 ### device_xiaomi_garnet
 
-- cd331e0 garnet: sepolicy: allow hal_audio_default to access miev and set vendor_audio_prop
-- 7ec99e7 garnet: charging: fix label, temp units, charger perms
-- c4ba066 garnet: parts: Only override Dolby Vision HDR type
+- No new commits.
 
 ### vendor_xiaomi_garnet
 
@@ -138,16 +154,7 @@
 
 ### device_xiaomi_garnet
 
-- a6e3b51 garnet: Drop qesdk blobs
-- 2ec2ed3 garnet: Bump super size to fix gapps errors
-- 0b280a7 garnet: Remove Force triple frame buffers
-- 675e7df garnet: Add props to improve battery backup
-- f6d054a garnet: Enable SurfaceFlinger's display power timer
-- 09d6081 garnet: Update from OS3.0.304.0.WNRMIXM
-- 96c5f3f garnet: Update from OS3.0.302.0.WNRMIXM
-- 27e6729 garnet: Remove lineage dependencies
 - dbe737e sm8250-common: Grant GPU sysfs access for kernel manager and diagnostics
-- 69822b2 garnet: init: Read camera sensor for proper about phone camera description
 - 4bc6f18 garnet: sepolicy: Update vendor access rules
 - da91fc2 garnet: include axion common soc_map
 - 10bff44 garnet: Bring up Axion
@@ -566,7 +573,6 @@
 - 353ad9c Reapply "garnet: power: Remove CPU GPU performance hints
 - ebfcc60 garnet: Load cpq module at boot
 - ca474fa garnet: Add camera info init props
-- be0f774 garnet: Grant GPU sysfs access for kernel manager and diagnostics
 
 ### vendor_xiaomi_garnet
 
