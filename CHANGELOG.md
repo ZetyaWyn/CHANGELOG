@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-11-06
+
+### device_xiaomi_garnet
+
+- 2bb23f4 garnet: Update CPU permissions and clean up sepolicy
+
+### vendor_xiaomi_garnet
+
+- e161684 garnet:Update OnePlus 9R audio effects libraries
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- e80521d dolby: init: Restore labels on persistent DMS data
+- 2523438 dolby: init: Remove duplicate DMS directory creation
+- d50ba1b dolby: sepolicy: Rework DMS access rules
+- 9e0173f dolby: Update Dolby and Qualcomm audio libraries
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-05
 
 ### device_xiaomi_garnet
