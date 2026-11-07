@@ -1,31 +1,199 @@
 # Changelog
 
+## 2026-11-07
+
+### device_xiaomi_garnet
+
+- 747136b garnet: Fix CPU scaling and configure kernel manager
+- dd65806 garnet: init: grant Power HAL access to CPU scaling nodes
+- 2400cc6 garnet: sepolicy: allow power HAL to access performance interfaces
+- 2cb2a2a garnet: sepolicy: allow power HAL to access cpu_dma_latency
+- 4aba605 garnet: sepolicy: Allow hal_power_default to read graphics sysfs
+- a179ed9 garnet: Remove unnecessary dex2oat properties
+- 67153ae garnet: properties: Enable VoLTE and VoWIFI for all carriers
+- df9dfca garnet: overlay: Use 4G instead of LTE icon for save statusbar space
+- cb159c3 garnet: Improve battery charging control with hysteresis
+- 2503619 garnet: sepolicy: allow hal_audio_default to access miev and set vendor_audio_prop
+- 7d27899 garnet: charging: fix label, temp units, charger perms
+- 196a713 garnet: parts: Only override Dolby Vision HDR type
+- 96ef0ee garnet: Drop qesdk blobs
+- 830bcce garnet: Bump super size to fix gapps errors
+- 759270b garnet: Remove Force triple frame buffers
+- b2c734e garnet: Add props to improve battery backup
+- f92efda garnet: Enable SurfaceFlinger's display power timer
+- d88dbe0 garnet: Update from OS3.0.304.0.WNRMIXM
+- 53d30af garnet: Update from OS3.0.302.0.WNRMIXM
+- 6ba397a garnet: Remove lineage dependencies
+- c273a2a garnet: Grant GPU sysfs access for kernel manager and diagnostics
+- 8867b7f garnet: init: Read camera sensor for proper about phone camera description
+- e9f1413 garnet: include axion common soc_map
+- 952b258 garnet: Bring up Axion
+- 09d8fb4 garnet: power: Rework powerhint and add FLING/UI_ANIMATION
+- f7859b9 garnet: power: Set GPUMinFreq 650MHz & GPUMaxFreq 940MHz on EXPENSIVE_RENDERING
+- 1ab3871 garnet: powerhint: Refine performance hints for various scenarios
+- 3357314 garnet: Change to Arm64 Only
+- e6112c4 [TMP] garnet: Disable PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS
+- 1231de8 garnet: Enable AOSP surfaceflinger
+- d62f10d garnet: rootdir: Do not allow foreground tasks to run on CPU7
+- 98364c6 garnet: rootdir: Move background cpuset to CPU0-1
+- d453f8d garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
+- 9fc14dc garnet: overlay: Remove PowerProfile.POWER_NONE
+- 89a76dd garnet: disable verbose camera logs
+- b8ae429 garnet: Set sensors logging level to warn
+- 98dfae7 garnet: Kill log spam in logcat from SensorService
+- 4e80fa1 garnet: Silence some spammy logging
+- 5288d8f garnet: Build some missing LDAC libs
+- c2d8832 garnet: properties: Enable QCRIL radio power saving
+- 205f155 garnet: props: Disable Logs
+- fc5c54a garnet: Disable continuous transaction tracing on all build types
+- 0060da1 garnet: Set display idle time to 0
+- 3cd5968 garnet: enable common build flags
+- e24fece garnet: Fix HBM sepolicy issues
+- 041afbb garnet: init: Give thermal profiles permissions 05-01 19:34:36.590 W/binder:2826_4(2826): type=1400 audit(0.0:3287): avc:  denied  { write } for  name="sconfig" dev="sysfs" ino=65252 scontext=u:r:system_app:s0 tcontext=u:object_r:sysfs_thermal:s0 tclass=file permissive=0 05-01 19:34:36.594 W/FileUtils(2826): No such file /sys/class/thermal/thermal_message/sconfig for writing 05-01 19:34:36.594 W/FileUtils(2826): java.io.FileNotFoundException: /sys/class/thermal/thermal_message/sconfig: open failed: EACCES (Permission denied)
+- 7f209fe garnet: Fix gamebar GPU info
+- c40cb63 garnet: Drop bypass charging and update translations
+- 9e6c5c1 garnet: parts: Enable predictive back gestures
+- 06948a6 garnet: parts: Refine UI
+- 1c066ac garnet: parts: Move GameBar strings to resources and translate
+- 0aa3055 garnet: parts: Apply expressive design style
+- c2ed026 garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
+- dba365d garnet: parts: Import from xiaomi_sdm845-common https://github.com/LineageOS/android_device_xiaomi_sdm845-common/tree/e261035d91b34cf0fdf0f012927e06a2bcdb03ed/parts
+- 82f1737 garnet: Speed profile services and wifi-service to reduce RAM and storage
+- bd96568 garnet: init: rm package cache on early boot
+- e2c7fdb garnet: fstab: set readahead_size_kb=128 to data
+- a98b8c4 garnet: rootdir: Set correct permission for ntsync
+- 7b242b9 garnet: Load ntsync module at boot
+- fd60c57 garnet: Add SM7435 init script
+- bda984c garnet: fix off-mode charging trigger
+- 12ae4c0 garnet: Add missing permission for charging
+- f74d3e4 garnet: Drop permissive mode and label charging policy
+- 200f0ee garnet: Implement thermal-based charging control
+- 1ae310a garnet: Guard erofs hints for erofs build
+- da6fb84 garnet: Add erofs compress hints
+- 2085ee9 garnet: Build gapps by default
+- a40c360 garnet: Switch system partitions to EROFS
+- ec44955 garnet: rootdir: Use foreground cpuset/uclamp for gralloc Makes sure rendering has enough capacity.
+- a931794 garnet: rootdir: Use foreground uclamp for hwcomposer Matches SF, makes sure rendering always has enough capacity.
+- fca0438 garnet: debloat: Remove Pixel Live Wallpaper
+- 00d3530 garnet: debloat: Drop jelly app
+- 738a1c3 garnet: Include app debloater
+- 45b27f7 garnet: Switch to 8GB Dalvik heap config
+- 115bbc0 garnet: overlay: Set default pin amount for home app
+- 565eae0 garnet: overlay: Add webview pinning
+- a4dfa37 garnet: Remove duplicate heap growth limit
+- 325c665 garnet: sepolicy: Neverallow app open access to /dev/ashmem
+- e8dde40 garnet: Add unix to hide Magisk in banking apps
+- f00023b garnet: init: Give proper permissions for /dev/diag
+- 031a74c garnet: Disable QCOM system daemon
+- cc9d499 garnet: rootdir: Remove IO read_ahead_kb tune
+- e54d400 garnet: audio: Route spatial output to Bluetooth
+- 32147d6 garnet: rootdir: Set swappiness to 60
+- caffd66 garnet: rootdir: Don't configure zram in QCOM's init post boot script
+- c5e7c24 garnet: camera: Set torch default strength level to max
+- e00c33b garnet: Implement torch light control
+- a1ccff8 garnet: Fixing connecting BLE (bt 5.x) devices (smart watches, etc.)
+- c27ed81 garnet: audio: Add fallback SW A2DP routes
+- 506491e garnet: Audio: Enable support of HW Accelerated Effects
+- 2798af7 garnet: audio: Add hardware accelerated audio effect
+- c7f4eb4 garnet: audio: Add DSEE effect
+- f56e63d garnet: audio: Fix overly loud notification sound
+- bec7344 garnet: Move c2_manifest_vendor.xml to device tree
+- 7013d62 garnet: Import QCOM audio effects from OnePlus 9R
+- a337c8f garnet: audio: use QCOM Implementation for Audio Effects
+- f5cd4b6 garnet: Include Sony Dolby Atmos and Sync with Spatial Audio
+- 556a787 garnet: props: Increase audio offload buffer size from 32KB to 64KB
+- f8671f6 garnet: audio: Fix mic issues in apps like WhatsApp
+- e82d01c garnet: DeviceAsWebcam: set HQ mode as default
+- 28ffeaa garnet: DeviceAsWebcam: disable USAGE_VIDEO_ENCODE ImageReader flag
+- e4778f5 garnet: Build DeviceAsWebcam service
+- dafd5b3 garnet: Setup DeviceAsWebcam
+- e8b6df7 garnet: Limit background CPU utilization
+- a7f1e59 garnet: Limit dex2oat cpu utilization
+- f468bf7 garnet: overlay: Enable PowerOffAlarmService
+- db127c6 garnet: sepolicy: Allow PowerOffAlarm app to find alarm service
+- 9beab7f garnet: rootdir: fix battery drain due to statsd
+- a02c5f8 garnet: overlay: Improve auto brightness
+- 571f370 garnet: Tweak some auto brightness configs
+- 943755d garnet: Optimize auto brightness adjustment
+- c70eed3 garnet: overlay: lower autoBrightness Debounce
+- 255ccc7 garnet: overlay: Increase auto brightness debounce
+- 5c6bd58 garnet: overlay: Add overlay to improve signal reception
+- d4e291a garnet: overlay: Enable Smart 5G
+- 3d732e8 garnet: overlay: Define OEM fast charge sysfs node
+- fff712f garnet: overlay: Enable Smart Pixels
+- b51a684 garnet: overlay: Disable high performance transitions
+- ae03bb5 garnet: Decouple interactive state from display
+- e27ecb6 garnet: Add SystemUI restart in restart advanced menu
+- eb2bc25 garnet: Enable LTO Optimizations
+- 1b7729b garnet: Overlay: Define config_screenRecorderAVCProfileLevel
+- dc6582a garnet: wifi: Enable Optimized Power Management
+- 5d6d1b3 garnet: wifi: Disable TDLS offchannel
+- 4197460 garnet: wifi: Smarter decisions on whether to use a 2 or 5Ghz AP
+- 84b2777 garnet: props: More VoNR props
+- bce33cb garnet: Enable VoNR Calls support Change-Id: I3cc986fd2352dc266e0d423767192c15c3669c5b Signed-off-by: Omar Mohamed <omarcoptan9@gmail.com> Signed-off-by: Z E U S <iamdrzeus14@gmail.com>
+- 1749bf2 garnet: Import carrier configuration from peridot
+- b88e2e5 sm8250-common: overlay: Enable VoNR on Jio 5G
+- 89d551c garnet: overlay: Set 5G threshold bandwidth to 0
+- cce9466 sm8250-common: overlay: Only allow 5G SA on Jio
+- 4de0126 garnet: overlay: Set LTE+ threshold bandwidth to 0
+- 680d539 garnet: overlay: Globally enable LTE+ icon
+- 2db9ca6 garnet: overlay: Allow VoLTE and VoWiFi by default
+- f43d1e3 garnet: remove FRP lock
+- fac5dd8 garnet: tune HWUI and SurfaceFlinger performance
+- 99b0660 garnet: Enable frame pacing for smoother visual performance
+- 9b84aa9 garnet: properties: Set persist.sys.purgeable_assets=1
+- 97edbe8 garnet: Enable debug.performance.tuning
+- abeea3c garnet: Apply dex2oat optimizations
+- d185665 garnet: disable_gl_backpressure
+- e1b3380 garnet: Set ro.netflix.bsp_rev
+- ce765ae garnet: Disable EGL image tracking
+- bb96b78 garnet: sepolicy: Label bluetooth props
+- a999204 garnet: Enable TWS plus feature using persist property
+- de8149f garnet: Enable Qualcomm TrueWireless™ Stereo
+- b040f44 garnet: sepolicy: Allow fingerprint HAL to access performance and sensor nodes
+- fc0bd3d garnet: Allow qti init shell to open/write page cluster size
+- c61e516 garnet: sepolicy: Allow system_app to access zram sysfs nodes
+- 621d8f9 garnet: sepolicy: Dontaudit camera hal default_prop
+- b3d9fde garnet: properties: camera: enable aux camera access for all apps
+- 8e734f6 garnet: sepolicy: Address system suspend denials
+- e26d6a3 garnet: sepolicy: Allow init/vold to write storage sysfs parameters
+- a2ee160 garnet: sepolicy: Label UFS discard_max_bytes
+- b5be4d9 garnet: Set BOOT_SECURITY_PATCH
+- ed650ea garnet: Set VENDOR_SECURITY_PATCH To PLATFORM
+- c9be66e garnet: disable FW roaming when in idle mode When device is idle, disable FW roaming (LOW RSSI roam, high band roam) to save power
+- ed9c2d8 garnet: overlay: Set Wi-Fi 6 support
+- 38e8460 garnet: Add com.android.bluetooth context to seapp_contexts
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-06
 
 ### device_xiaomi_garnet
 
-- 4edbeb5 garnet: init: grant Power HAL access to CPU scaling nodes
-- 667ef19 garnet: sepolicy: allow power HAL to access performance interfaces
-- 302e5db garnet: sepolicy: allow power HAL to access cpu_dma_latency
-- df97aae garnet: sepolicy: Allow hal_power_default to read graphics sysfs
 - ddfb5e7 garnet: sepolicy: Add missing proc_vm type
-- 21dc338 garnet: Remove unnecessary dex2oat properties
-- ea6169c garnet: properties: Enable VoLTE and VoWIFI for all carriers
-- 0adbf28 garnet: overlay: Use 4G instead of LTE icon for save statusbar space
-- a136f5c garnet: Improve battery charging control with hysteresis
-- c197e54 garnet: sepolicy: allow hal_audio_default to access miev and set vendor_audio_prop
-- a4ea3ec garnet: charging: fix label, temp units, charger perms
-- 7f0a3fe garnet: parts: Only override Dolby Vision HDR type
-- 4724b3d garnet: Drop qesdk blobs
-- ea105b4 garnet: Bump super size to fix gapps errors
-- 510486d garnet: Remove Force triple frame buffers
-- 58a5c2d garnet: Add props to improve battery backup
-- d8e0485 garnet: Enable SurfaceFlinger's display power timer
-- 3732c9d garnet: Update from OS3.0.304.0.WNRMIXM
-- dcb33a4 garnet: Update from OS3.0.302.0.WNRMIXM
-- 373472a garnet: Remove lineage dependencies
-- d14740b garnet: Grant GPU sysfs access for kernel manager and diagnostics
-- 76ee9ed garnet: init: Read camera sensor for proper about phone camera description
 - 2bb23f4 garnet: Update CPU permissions and clean up sepolicy
 
 ### vendor_xiaomi_garnet
@@ -156,143 +324,6 @@
 
 - dbe737e sm8250-common: Grant GPU sysfs access for kernel manager and diagnostics
 - 4bc6f18 garnet: sepolicy: Update vendor access rules
-- da91fc2 garnet: include axion common soc_map
-- 10bff44 garnet: Bring up Axion
-- 04b8c83 garnet: power: Rework powerhint and add FLING/UI_ANIMATION
-- 4e7cab2 garnet: power: Set GPUMinFreq 650MHz & GPUMaxFreq 940MHz on EXPENSIVE_RENDERING
-- 8a391f5 garnet: powerhint: Refine performance hints for various scenarios
-- 72679be garnet: Change to Arm64 Only
-- b3df41c [TMP] garnet: Disable PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS
-- 2bb9d95 garnet: Enable AOSP surfaceflinger
-- 80ccf97 garnet: rootdir: Do not allow foreground tasks to run on CPU7
-- 233d3de garnet: rootdir: Move background cpuset to CPU0-1
-- a8d5899 garnet: rootdir: Set restricted cpuset to the same CPUs as system-background
-- b40f672 garnet: overlay: Remove PowerProfile.POWER_NONE
-- c630f23 garnet: disable verbose camera logs
-- faf8641 garnet: Set sensors logging level to warn
-- 5fa161f garnet: Kill log spam in logcat from SensorService
-- 7782eaf garnet: Silence some spammy logging
-- 82ac8f6 garnet: Build some missing LDAC libs
-- c0eff98 garnet: properties: Enable QCRIL radio power saving
-- c6350b4 garnet: props: Disable Logs
-- 87a0662 garnet: Disable continuous transaction tracing on all build types
-- e2e2b18 garnet: Set display idle time to 0
-- dc63699 garnet: enable common build flags
-- 0fdec72 garnet: Fix HBM sepolicy issues
-- 18a169a garnet: init: Give thermal profiles permissions 05-01 19:34:36.590 W/binder:2826_4(2826): type=1400 audit(0.0:3287): avc:  denied  { write } for  name="sconfig" dev="sysfs" ino=65252 scontext=u:r:system_app:s0 tcontext=u:object_r:sysfs_thermal:s0 tclass=file permissive=0 05-01 19:34:36.594 W/FileUtils(2826): No such file /sys/class/thermal/thermal_message/sconfig for writing 05-01 19:34:36.594 W/FileUtils(2826): java.io.FileNotFoundException: /sys/class/thermal/thermal_message/sconfig: open failed: EACCES (Permission denied)
-- 493666b garnet: Fix gamebar GPU info
-- 4f702a0 garnet: Drop bypass charging and update translations
-- 20acb0a garnet: parts: Enable predictive back gestures
-- b2d61e8 garnet: parts: Refine UI
-- e9e01f0 garnet: parts: Move GameBar strings to resources and translate
-- 79abc6d garnet: parts: Apply expressive design style
-- 5e182a9 garnet: parts: Add translations for pt-BR, pt-PT, hi, fr, de, it, ar, ja, ko, az, ca, ckb, el, en-rAU, en-rCA, en-rGB, en-rIN, fa, ga-rIE, hu, iw, nn-rNO, pl, ro, sl, sq, ta, ug and vi
-- 523224d garnet: parts: Import from xiaomi_sdm845-common https://github.com/LineageOS/android_device_xiaomi_sdm845-common/tree/e261035d91b34cf0fdf0f012927e06a2bcdb03ed/parts
-- bd20b1a garnet: Speed profile services and wifi-service to reduce RAM and storage
-- b7eaa77 garnet: init: rm package cache on early boot
-- d937ac2 garnet: fstab: set readahead_size_kb=128 to data
-- a6ad33c garnet: rootdir: Set correct permission for ntsync
-- e960a7a garnet: Load ntsync module at boot
-- 6d4eb27 garnet: Add SM7435 init script
-- 163a132 garnet: fix off-mode charging trigger
-- 10ff61b garnet: Add missing permission for charging
-- eac9cef garnet: Drop permissive mode and label charging policy
-- 87838d0 garnet: Implement thermal-based charging control
-- 9219bb9 garnet: Guard erofs hints for erofs build
-- ffa2b85 garnet: Add erofs compress hints
-- e0152e9 garnet: Build gapps by default
-- 03ad95d garnet: Switch system partitions to EROFS
-- 39e1f8f garnet: rootdir: Use foreground cpuset/uclamp for gralloc Makes sure rendering has enough capacity.
-- 2744f9e garnet: rootdir: Use foreground uclamp for hwcomposer Matches SF, makes sure rendering always has enough capacity.
-- 2045b99 garnet: debloat: Remove Pixel Live Wallpaper
-- 95332fc garnet: debloat: Drop jelly app
-- 25591b3 garnet: Include app debloater
-- a8e8374 garnet: Switch to 8GB Dalvik heap config
-- 114e1bd garnet: overlay: Set default pin amount for home app
-- 51cd8a0 garnet: overlay: Add webview pinning
-- dda38f3 garnet: Remove duplicate heap growth limit
-- 1c1a3b9 garnet: sepolicy: Neverallow app open access to /dev/ashmem
-- 6673a80 garnet: Add unix to hide Magisk in banking apps
-- f7915ae garnet: init: Give proper permissions for /dev/diag
-- f72eebc garnet: Disable QCOM system daemon
-- 33ff70e garnet: rootdir: Remove IO read_ahead_kb tune
-- 9e1b222 garnet: audio: Route spatial output to Bluetooth
-- 7c6d27a garnet: rootdir: Set swappiness to 60
-- 8dd0ccd garnet: rootdir: Don't configure zram in QCOM's init post boot script
-- 905db5c garnet: camera: Set torch default strength level to max
-- ed77494 garnet: Implement torch light control
-- c9dcc2a garnet: Fixing connecting BLE (bt 5.x) devices (smart watches, etc.)
-- 68b2fa3 garnet: audio: Add fallback SW A2DP routes
-- 74adb7d garnet: Audio: Enable support of HW Accelerated Effects
-- 8e17084 garnet: audio: Add hardware accelerated audio effect
-- 35016c3 garnet: audio: Add DSEE effect
-- 092c3d9 garnet: audio: Fix overly loud notification sound
-- 1861307 garnet: Move c2_manifest_vendor.xml to device tree
-- 3ed2a34 garnet: Import QCOM audio effects from OnePlus 9R
-- 63b139d garnet: audio: use QCOM Implementation for Audio Effects
-- 200de6c garnet: Include Sony Dolby Atmos and Sync with Spatial Audio
-- c22306d garnet: props: Increase audio offload buffer size from 32KB to 64KB
-- ffedceb garnet: audio: Fix mic issues in apps like WhatsApp
-- 946b34f garnet: DeviceAsWebcam: set HQ mode as default
-- f1a89a4 garnet: DeviceAsWebcam: disable USAGE_VIDEO_ENCODE ImageReader flag
-- 6507ab8 garnet: Build DeviceAsWebcam service
-- e47be11 garnet: Setup DeviceAsWebcam
-- d2e1d8e garnet: Limit background CPU utilization
-- ea2dbd4 garnet: Limit dex2oat cpu utilization
-- 96eb8cc garnet: overlay: Enable PowerOffAlarmService
-- e86d4eb garnet: sepolicy: Allow PowerOffAlarm app to find alarm service
-- 66436bd garnet: rootdir: fix battery drain due to statsd
-- aab7a91 garnet: overlay: Improve auto brightness
-- 11a4948 garnet: Tweak some auto brightness configs
-- c1f7d13 garnet: Optimize auto brightness adjustment
-- 2a50d97 garnet: overlay: lower autoBrightness Debounce
-- ccbe64d garnet: overlay: Increase auto brightness debounce
-- 87e1898 garnet: overlay: Add overlay to improve signal reception
-- 5f35312 garnet: overlay: Enable Smart 5G
-- 559d14d garnet: overlay: Define OEM fast charge sysfs node
-- dd22020 garnet: overlay: Enable Smart Pixels
-- 6093150 garnet: overlay: Disable high performance transitions
-- 0d2d4ca garnet: Decouple interactive state from display
-- 77bdf05 garnet: Add SystemUI restart in restart advanced menu
-- 55486ce garnet: Enable LTO Optimizations
-- db43d33 garnet: Overlay: Define config_screenRecorderAVCProfileLevel
-- 030cea3 garnet: wifi: Enable Optimized Power Management
-- a8ec194 garnet: wifi: Disable TDLS offchannel
-- 75db85f garnet: wifi: Smarter decisions on whether to use a 2 or 5Ghz AP
-- da31d41 garnet: props: More VoNR props
-- c07bcd7 garnet: Enable VoNR Calls support Change-Id: I3cc986fd2352dc266e0d423767192c15c3669c5b Signed-off-by: Omar Mohamed <omarcoptan9@gmail.com> Signed-off-by: Z E U S <iamdrzeus14@gmail.com>
-- 80a444c garnet: Import carrier configuration from peridot
-- 1b7e1e3 sm8250-common: overlay: Enable VoNR on Jio 5G
-- a40b155 garnet: overlay: Set 5G threshold bandwidth to 0
-- 9070825 sm8250-common: overlay: Only allow 5G SA on Jio
-- a64b3cf garnet: overlay: Set LTE+ threshold bandwidth to 0
-- 1108eee garnet: overlay: Globally enable LTE+ icon
-- 45ad428 garnet: overlay: Allow VoLTE and VoWiFi by default
-- bdb4942 garnet: remove FRP lock
-- 1fe13d0 garnet: tune HWUI and SurfaceFlinger performance
-- 1a4e56a garnet: Enable frame pacing for smoother visual performance
-- 81bb9e2 garnet: properties: Set persist.sys.purgeable_assets=1
-- a1ed146 garnet: Enable debug.performance.tuning
-- a5b4244 garnet: Apply dex2oat optimizations
-- 24b3aa1 garnet: disable_gl_backpressure
-- 880d7c1 garnet: Set ro.netflix.bsp_rev
-- aef40d5 garnet: Disable EGL image tracking
-- 0dd1d7a garnet: sepolicy: Label bluetooth props
-- 1534ea6 garnet: Enable TWS plus feature using persist property
-- 27bf59e garnet: Enable Qualcomm TrueWireless™ Stereo
-- 48585b5 garnet: sepolicy: Allow fingerprint HAL to access performance and sensor nodes
-- c494242 garnet: Allow qti init shell to open/write page cluster size
-- d20ac2b garnet: sepolicy: Allow system_app to access zram sysfs nodes
-- 33ba12b garnet: sepolicy: Dontaudit camera hal default_prop
-- 392ca58 garnet: properties: camera: enable aux camera access for all apps
-- 9b0a3ac garnet: sepolicy: Address system suspend denials
-- 4109c24 garnet: sepolicy: Allow init/vold to write storage sysfs parameters
-- caecd45 garnet: sepolicy: Label UFS discard_max_bytes
-- 57831b6 garnet: Set BOOT_SECURITY_PATCH
-- 95a075d garnet: Set VENDOR_SECURITY_PATCH To PLATFORM
-- a1b1cfc garnet: disable FW roaming when in idle mode When device is idle, disable FW roaming (LOW RSSI roam, high band roam) to save power
-- 058dcfc garnet: overlay: Set Wi-Fi 6 support
-- d04be26 garnet: Add com.android.bluetooth context to seapp_contexts
 - 9e18b94 garnet: SEPolicy: Grant system_app access to thermal sysfs files
 
 ### vendor_xiaomi_garnet
