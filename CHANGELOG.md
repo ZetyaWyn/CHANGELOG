@@ -178,7 +178,7 @@
 
 ### hardware_dolby
 
-- No new commits.
+- e51b1ee garnet: Use foreground uclamp for Codec2 service
 
 ### Kernel
 
