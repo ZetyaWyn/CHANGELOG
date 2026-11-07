@@ -4,8 +4,8 @@
 
 ### device_xiaomi_garnet
 
-- eb50e27 garnet: charging: 40C -> 10, 43C -> 16
-- db4fd4d garnet: sepolicy: Add missing proc_vm type
+- 33f6959 garnet: charging: 40C -> 10, 43C -> 16
+- 9a15d23 garnet: sepolicy: Add missing proc_vm type
 - 747136b garnet: Fix CPU scaling and configure kernel manager
 - dd65806 garnet: init: grant Power HAL access to CPU scaling nodes
 - 2400cc6 garnet: sepolicy: allow power HAL to access performance interfaces
