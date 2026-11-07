@@ -4,6 +4,8 @@
 
 ### device_xiaomi_garnet
 
+- eb50e27 garnet: charging: 40C -> 10, 43C -> 16
+- db4fd4d garnet: sepolicy: Add missing proc_vm type
 - 747136b garnet: Fix CPU scaling and configure kernel manager
 - dd65806 garnet: init: grant Power HAL access to CPU scaling nodes
 - 2400cc6 garnet: sepolicy: allow power HAL to access performance interfaces
@@ -178,7 +180,21 @@
 
 ### hardware_dolby
 
-- e51b1ee garnet: Use foreground uclamp for Codec2 service
+- eb716da garnet: Use foreground uclamp for Codec2 service
+- 88ebadc dolby: init: Restore labels on persistent DMS data
+- 49ccf2d dolby: init: Remove duplicate DMS directory creation
+- 9b29644 dolby: sepolicy: Rework DMS access rules
+- 93ed859 dolby: Import translations from Crowdin
+- 8b2fe5d dolby: Merge LunarisDolby updates from Ghosuto
+- 10502a7 dolby: Add missing library
+- 253558a configs: Remove legacy OMX aliases from Dolby Codec2 decoders
+- fb69b6a configs: Enable Dolby AC-4 decoding
+- 9ae9366 dolby: update DAX and remove software codec
+- 1e8d77a dolby: translation from Crowdin
+- 768e7f4 dolby: show active audio output device on home screen
+- f99912a dolby: Refine bass enhancement profiles
+- 66b0e70 dolby: sync LunarisDolby updates
+- 76ae9ce dolby: mark UDC/AC4 codecs as software-codec, enable AC4
 
 ### Kernel
 
@@ -193,7 +209,6 @@
 
 ### device_xiaomi_garnet
 
-- ddfb5e7 garnet: sepolicy: Add missing proc_vm type
 - 2bb23f4 garnet: Update CPU permissions and clean up sepolicy
 
 ### vendor_xiaomi_garnet
@@ -210,9 +225,6 @@
 
 ### hardware_dolby
 
-- e80521d dolby: init: Restore labels on persistent DMS data
-- 2523438 dolby: init: Remove duplicate DMS directory creation
-- d50ba1b dolby: sepolicy: Rework DMS access rules
 - 9e0173f dolby: Update Dolby and Qualcomm audio libraries
 
 ### Kernel
@@ -359,11 +371,7 @@
 
 ### hardware_dolby
 
-- 26acfc2 dolby: Import translations from Crowdin
-- 42956d5 dolby: Merge LunarisDolby updates from Ghosuto
-- cac8371 dolby: Add missing library
-- 92b6737 configs: Remove legacy OMX aliases from Dolby Codec2 decoders
-- cf38fdb configs: Enable Dolby AC-4 decoding
+- No new commits.
 
 ### Kernel
 
