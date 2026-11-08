@@ -4,9 +4,17 @@
 
 ### device_xiaomi_garnet
 
-- 2f0685a garnet: sepolicy: allow system_app to read battery temp
-- 8ef3114 garnet: props: remove debug.sf.enable_adpf_cpu_hint
-- 6786870 garnet: charging: 37C -> 5, 39C -> 10, 41C -> 16, hyst 1C
+- 1db77d3 garnet: overlay: enable WFC by default
+- 7b5495e garnet: sepolicy: allow system_app to read battery temp
+- 8d434a1 garnet: props: remove debug.sf.enable_adpf_cpu_hint
+- e7de734 garnet: charging: 37C -> 5, 39C -> 10, 41C -> 16, hyst 1C
+- 07aded8 garnet: charging: 40C -> 10, 43C -> 16
+- ae60723 garnet: sepolicy: Add missing proc_vm type
+- c38e9b6 garnet: init: grant Power HAL access to CPU scaling nodes
+- 8b47e54 garnet: sepolicy: allow power HAL to access performance interfaces
+- 23488de garnet: sepolicy: allow power HAL to access cpu_dma_latency
+- 0b09ff0 garnet: sepolicy: Allow hal_power_default to read graphics sysfs
+- 84cca23 garnet: Remove unnecessary dex2oat properties
 
 ### vendor_xiaomi_garnet
 
@@ -37,14 +45,7 @@
 
 ### device_xiaomi_garnet
 
-- 33f6959 garnet: charging: 40C -> 10, 43C -> 16
-- 9a15d23 garnet: sepolicy: Add missing proc_vm type
 - 747136b garnet: Fix CPU scaling and configure kernel manager
-- dd65806 garnet: init: grant Power HAL access to CPU scaling nodes
-- 2400cc6 garnet: sepolicy: allow power HAL to access performance interfaces
-- 2cb2a2a garnet: sepolicy: allow power HAL to access cpu_dma_latency
-- 4aba605 garnet: sepolicy: Allow hal_power_default to read graphics sysfs
-- a179ed9 garnet: Remove unnecessary dex2oat properties
 - 67153ae garnet: properties: Enable VoLTE and VoWIFI for all carriers
 - df9dfca garnet: overlay: Use 4G instead of LTE icon for save statusbar space
 - cb159c3 garnet: Improve battery charging control with hysteresis
