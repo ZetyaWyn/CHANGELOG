@@ -1,5 +1,38 @@
 # Changelog
 
+## 2026-11-08
+
+### device_xiaomi_garnet
+
+- 2f0685a garnet: sepolicy: allow system_app to read battery temp
+- 8ef3114 garnet: props: remove debug.sf.enable_adpf_cpu_hint
+- 6786870 garnet: charging: 37C -> 5, 39C -> 10, 41C -> 16, hyst 1C
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-07
 
 ### device_xiaomi_garnet
