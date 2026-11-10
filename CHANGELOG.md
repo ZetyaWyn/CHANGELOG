@@ -23,7 +23,7 @@
 
 ### hardware_dolby
 
-- No new commits.
+- ce1690e dolby: Fix master toggle reactivation and synchronize QS tile state
 
 ### Kernel
 
@@ -689,7 +689,6 @@
 - 674d53b dolby: Fix unexpected Dolby deactivation when per-device memory is enabled
 - 6db29d6 dolby: Update translations from Crowdin
 - d9f1dd5 Redesign UI with expressive typography
-- 754bb43 dolby: Fix master toggle reactivation and synchronize QS tile state
 
 ### Kernel
 
