@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- 3f569ce garnet: Enable R8 optimizations for system_server and SystemUI
 - d260e0e garnet: Prefer HW codecs for video thumbnails
 - ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
 - d619524 garnet: Add missing RKPD props from stock rom
