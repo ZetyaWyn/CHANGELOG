@@ -4,7 +4,7 @@
 
 ### device_xiaomi_garnet
 
-- No new commits.
+- 0b510c1 garnet: Remove unused CoreSight modules
 
 ### vendor_xiaomi_garnet
 
@@ -20,8 +20,10 @@
 
 ### hardware_dolby
 
+- 64f8b32 dolby: new Atmos card with animated ring
+- bce0517 dolby: add ViPER bass and clarity modes
+- 21fbdc2 dolby: model ViPER bass and clarity effects on the GEQ
 - c2b8e63 dolby: uwu
-- 685085b dolby: model ViPER bass and clarity effects on the GEQ
 
 ### Kernel
 
