@@ -20,6 +20,7 @@
 
 ### hardware_dolby
 
+- 645dccd dolby: restore EQ on bass/treble off, sync main card with QS tile
 - d47cace dolby: keep DAX XML values for profile settings the user never changed
 - 0bcebdd dolby: speaker correction on/off switch, exact EQ restore
 - b7dabc0 dolby: Add ViPER speaker correction
