@@ -20,6 +20,10 @@
 
 ### hardware_dolby
 
+- d47cace dolby: keep DAX XML values for profile settings the user never changed
+- 0bcebdd dolby: speaker correction on/off switch, exact EQ restore
+- b7dabc0 dolby: Add ViPER speaker correction
+- 5acdce5 dolby: make Atmos ring draggable with spring-back
 - 5443414 dolby: fix master switch off after reboot, add bass cutoff
 
 ### Kernel
