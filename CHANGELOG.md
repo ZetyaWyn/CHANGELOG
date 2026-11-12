@@ -20,12 +20,15 @@
 
 ### hardware_dolby
 
-- 645dccd dolby: restore EQ on bass/treble off, sync main card with QS tile
-- d47cace dolby: keep DAX XML values for profile settings the user never changed
-- 0bcebdd dolby: speaker correction on/off switch, exact EQ restore
-- b7dabc0 dolby: Add ViPER speaker correction
-- 5acdce5 dolby: make Atmos ring draggable with spring-back
-- 5443414 dolby: fix master switch off after reboot, add bass cutoff
+- 9aa01c9 dolby: restore EQ on bass/treble off, sync main card with QS tile
+- c11199a dolby: keep DAX XML values for profile settings the user never changed
+- 1c5add6 dolby: speaker correction on/off switch, exact EQ restore
+- 10e8e51 dolby: Add ViPER speaker correction
+- 8a6f6b4 dolby: make Atmos ring draggable with spring-back
+- 3ea3d03 dolby: fix master switch off after reboot, add bass cutoff
+- 627c00d dolby: new Atmos card with animated ring
+- 9010591 dolby: add ViPER bass and clarity modes
+- 937008f dolby: model ViPER bass and clarity effects on the GEQ
 
 ### Kernel
 
@@ -56,9 +59,6 @@
 
 ### hardware_dolby
 
-- 64f8b32 dolby: new Atmos card with animated ring
-- bce0517 dolby: add ViPER bass and clarity modes
-- 21fbdc2 dolby: model ViPER bass and clarity effects on the GEQ
 - c2b8e63 dolby: uwu
 
 ### Kernel
