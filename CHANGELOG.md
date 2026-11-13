@@ -20,13 +20,15 @@
 
 ### hardware_dolby
 
-- f1da40e dolby: restore EQ on bass/treble off, sync main card with QS tile
-- ada6aa2 dolby: keep DAX XML values for profile settings the user never changed
-- ef2896d dolby: speaker correction on/off switch, exact EQ restore
-- e5dd342 dolby: Add ViPER speaker correction
-- db56ceb dolby: make Atmos ring draggable with spring-back
-- 45025fa dolby: fix master switch off after reboot, add bass cutoff
-- 8c26d10 dolby: new Atmos card with animated ring
+- f1144e6 dolby: Improve ViPER effects and dynamic system
+- 1e36391 dolby: ViperFX-style advanced settings backed by the ViPER effect
+- dc20d7c dolby: restore EQ on bass/treble off, sync main card with QS tile
+- 44b325e dolby: keep DAX XML values for profile settings the user never changed
+- 2bcfe98 dolby: speaker correction on/off switch, exact EQ restore
+- d5482c5 dolby: Add ViPER speaker correction
+- ea24cc3 dolby: make Atmos ring draggable with spring-back
+- f6c5623 dolby: fix master switch off after reboot, add bass cutoff
+- 0454d79 dolby: new Atmos card with animated ring
 - d65b1d3 dolby: add ViPER bass and clarity modes
 - ad947a4 dolby: model ViPER bass and clarity effects on the GEQ
 - 0b13258 dolby: Use foreground uclamp for Codec2 service
