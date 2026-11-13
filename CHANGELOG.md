@@ -1,5 +1,45 @@
 # Changelog
 
+## 2026-11-13
+
+### device_xiaomi_garnet
+
+- No new commits.
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- f1da40e dolby: restore EQ on bass/treble off, sync main card with QS tile
+- ada6aa2 dolby: keep DAX XML values for profile settings the user never changed
+- ef2896d dolby: speaker correction on/off switch, exact EQ restore
+- e5dd342 dolby: Add ViPER speaker correction
+- db56ceb dolby: make Atmos ring draggable with spring-back
+- 45025fa dolby: fix master switch off after reboot, add bass cutoff
+- 8c26d10 dolby: new Atmos card with animated ring
+- d65b1d3 dolby: add ViPER bass and clarity modes
+- ad947a4 dolby: model ViPER bass and clarity effects on the GEQ
+- 0b13258 dolby: Use foreground uclamp for Codec2 service
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-12
 
 ### device_xiaomi_garnet
@@ -20,15 +60,7 @@
 
 ### hardware_dolby
 
-- 9aa01c9 dolby: restore EQ on bass/treble off, sync main card with QS tile
-- c11199a dolby: keep DAX XML values for profile settings the user never changed
-- 1c5add6 dolby: speaker correction on/off switch, exact EQ restore
-- 10e8e51 dolby: Add ViPER speaker correction
-- 8a6f6b4 dolby: make Atmos ring draggable with spring-back
-- 3ea3d03 dolby: fix master switch off after reboot, add bass cutoff
-- 627c00d dolby: new Atmos card with animated ring
-- 9010591 dolby: add ViPER bass and clarity modes
-- 937008f dolby: model ViPER bass and clarity effects on the GEQ
+- No new commits.
 
 ### Kernel
 
