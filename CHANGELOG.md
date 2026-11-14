@@ -4,7 +4,9 @@
 
 ### device_xiaomi_garnet
 
-- No new commits.
+- 9568cec garnet: audio: Add ViPER4Android effect
+- ee65d3b garnet: camera: Support led:torch_1 for Redmi variant
+- 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
 
 ### vendor_xiaomi_garnet
 
@@ -20,6 +22,10 @@
 
 ### hardware_dolby
 
+- 7aa7d98 dolby: Update README with Sony DSEE HX and ViPER4Android references
+- 79d156b dolby: Add ViPER FX library
+- 9b4dc5e dolby: Translations from Crowdin
+- e55def1 dolby: ViperFX-style advanced settings,Digital Sound Enhancement Engine HX and ViPER effect backend
 - 72cda79 dolby: fix boot activation, double-tap enable, tile/card sync and profile-switch effect loss
 - 19fa853 dolby: Finalize ViPER DSP, DSEE HX, single-tap UI, profile switch rebinding, and boot persistence
 - 14b975e dolby: Fix Speaker optimization layout/dispatch, single-tap UI state sync, and profile switch effect rebinding
@@ -149,7 +155,6 @@
 
 ### device_xiaomi_garnet
 
-- 3f569ce garnet: Enable R8 optimizations for system_server and SystemUI
 - d260e0e garnet: Prefer HW codecs for video thumbnails
 - ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
 - d619524 garnet: Add missing RKPD props from stock rom
