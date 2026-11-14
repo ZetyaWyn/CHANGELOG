@@ -4,8 +4,8 @@
 
 ### device_xiaomi_garnet
 
-- 9568cec garnet: audio: Add ViPER4Android effect
-- ee65d3b garnet: camera: Support led:torch_1 for Redmi variant
+- bcf12d2 garnet: audio: Add ViPER4Android effect
+- 7a07a14 garnet: camera: Support led:torch_1 for Redmi variant
 - 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
 
 ### vendor_xiaomi_garnet
