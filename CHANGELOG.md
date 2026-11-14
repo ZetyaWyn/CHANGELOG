@@ -20,6 +20,13 @@
 
 ### hardware_dolby
 
+- 72cda79 dolby: fix boot activation, double-tap enable, tile/card sync and profile-switch effect loss
+- 19fa853 dolby: Finalize ViPER DSP, DSEE HX, single-tap UI, profile switch rebinding, and boot persistence
+- 14b975e dolby: Fix Speaker optimization layout/dispatch, single-tap UI state sync, and profile switch effect rebinding
+- 7418839 dolby: Fix single-tap main switch/QS sync, immediate profile effect binding, and remove DSEE logs
+- 28c85a7 dolby: Add mode-specific ViPER summaries, fix Subwoofer Hz dispatch, and add DSEE HAL diagnostics
+- dbd94c2 dolby: Fix bass single-tap toggles, active profile sync, subwoofer Hz slider, and compact Speaker optimization/DSEE UI
+- dfcbe35 dolby: Fix ViPER Clarity toggle, SpeakerCorrection command ID, and DynamicSystem coefficients
 - 7bd6540 dolby: Add DSEE HX toggle, native SpeakerCorrection, and refine DynamicSystem DSP
 - 96bfce2 dolby: Fix jni_headers include and masterEnabled parameter name
 - ef4a4f3 dolby: Integrate native ViPER DSP effects and JNI engine bridge
