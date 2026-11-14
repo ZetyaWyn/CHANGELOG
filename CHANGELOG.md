@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-11-14
+
+### device_xiaomi_garnet
+
+- No new commits.
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- 7bd6540 dolby: Add DSEE HX toggle, native SpeakerCorrection, and refine DynamicSystem DSP
+- 96bfce2 dolby: Fix jni_headers include and masterEnabled parameter name
+- ef4a4f3 dolby: Integrate native ViPER DSP effects and JNI engine bridge
+- d4ba771 dolby: expandable rows for mid enhancer, speaker correction, volume leveler, 3D sound and dialogue enhancer
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-13
 
 ### device_xiaomi_garnet
