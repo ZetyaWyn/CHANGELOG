@@ -21,6 +21,10 @@
 
 ### hardware_dolby
 
+- fe08c55 dolby: DSPVolumeSynchronizer: Fix receiver lifecycle, route-change volume sync, and boot permissions
+- 7f53439 dolby: Update README with Sony DSEE HX and ViPER4Android references
+- dab8b28 dolby: Add ViPER FX library
+- 3cbd849 dolby: ViperFX-style advanced settings,Digital Sound Enhancement Engine HX and ViPER effect backend
 - d1359c7 dolby: Fix per-device memory snapshots, Advanced settings state sync, and session rebinding
 - 45f82c8 DSPVolumeSynchronizer: Fix receiver lifecycle, route-change volume sync, and boot permissions
 
@@ -53,10 +57,7 @@
 
 ### hardware_dolby
 
-- 7aa7d98 dolby: Update README with Sony DSEE HX and ViPER4Android references
-- 79d156b dolby: Add ViPER FX library
 - 9b4dc5e dolby: Translations from Crowdin
-- e55def1 dolby: ViperFX-style advanced settings,Digital Sound Enhancement Engine HX and ViPER effect backend
 - 72cda79 dolby: fix boot activation, double-tap enable, tile/card sync and profile-switch effect loss
 - 19fa853 dolby: Finalize ViPER DSP, DSEE HX, single-tap UI, profile switch rebinding, and boot persistence
 - 14b975e dolby: Fix Speaker optimization layout/dispatch, single-tap UI state sync, and profile switch effect rebinding
