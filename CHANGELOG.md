@@ -1,11 +1,42 @@
 # Changelog
 
+## 2026-11-15
+
+### device_xiaomi_garnet
+
+- e5895fa garnet: audio: Add ViPER4Android effect
+- 3728d33 garnet: camera: Support led:torch_1 for Redmi variant
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- d1359c7 dolby: Fix per-device memory snapshots, Advanced settings state sync, and session rebinding
+- 45f82c8 DSPVolumeSynchronizer: Fix receiver lifecycle, route-change volume sync, and boot permissions
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-14
 
 ### device_xiaomi_garnet
 
-- bcf12d2 garnet: audio: Add ViPER4Android effect
-- 7a07a14 garnet: camera: Support led:torch_1 for Redmi variant
 - 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
 
 ### vendor_xiaomi_garnet
