@@ -1,10 +1,41 @@
 # Changelog
 
+## 2026-11-16
+
+### device_xiaomi_garnet
+
+- 92f7cae garnet: fix charge limit write failure and stop mi_thermald overriding it
+- 5fea373 garnet: audio: Add ViPER4Android effect
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-15
 
 ### device_xiaomi_garnet
 
-- e5895fa garnet: audio: Add ViPER4Android effect
 - 3728d33 garnet: camera: Support led:torch_1 for Redmi variant
 
 ### vendor_xiaomi_garnet
