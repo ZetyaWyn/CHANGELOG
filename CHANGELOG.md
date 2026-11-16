@@ -36,7 +36,7 @@
 
 ### device_xiaomi_garnet
 
-- 3728d33 garnet: camera: Support led:torch_1 for Redmi variant
+- No new commits.
 
 ### vendor_xiaomi_garnet
 
