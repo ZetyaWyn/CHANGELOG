@@ -21,7 +21,7 @@
 
 ### hardware_dolby
 
-- No new commits.
+- 2d5b2d9 dolby: add codec2 dolby hevc encoder blobs
 
 ### Kernel
 
