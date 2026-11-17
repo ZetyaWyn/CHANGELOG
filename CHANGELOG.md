@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-11-17
+
+### device_xiaomi_garnet
+
+- f294fef garnet: Increase priority of OpenDeltaOverlayGarnet
+- ed4f2ac garnet: Support A/B perf mode
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-16
 
 ### device_xiaomi_garnet
