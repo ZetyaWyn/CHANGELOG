@@ -4,6 +4,7 @@
 
 ### device_xiaomi_garnet
 
+- 3bc68f2 garnet: props: enable display idle timers
 - 2ec3727 garnet: power: tune powerhint for battery
 
 ### vendor_xiaomi_garnet
