@@ -4,24 +4,73 @@
 
 ### device_xiaomi_garnet
 
+- 631d580 garnet: props: Select AIDL for Codec2 HAL
+- 8a8812c garnet: fix charge limit write failure and stop mi_thermald overriding it
+- 2757503 garnet: audio: Add ViPER4Android effect
+- 5c01210 garnet: Route the camera.qcom.so CamX format lookup through the shim
+- 7ee37f9 garnet: Declare the HIDL gralloc 4.0 mapper
+- 6850ead garnet: modules: Load mi_thermal_interface
+- 4c38794 garnet: modules: Load qti_battery_charger_main
+- d7bb1b6 garnet: Use the stock display ids for the display configs
+- 80688e0 garnet: Keep unused clocks and power domains enabled
+- 1ca5e8a garnet: Build and load the NXP NFC driver
+- 150fbdd garnet: sepolicy: Let the camera provider use QSPM
+- 3195be5 garnet: sepolicy: Resolve the sm8750 neverallows
+- ad38b8a garnet: udfps: Use the local HBM sysfs nodes of the display driver
+- c8afd72 garnet: sepolicy: Label the panel cell id and panel info nodes
+- 994eca7 garnet: Link the legacy CamX JPEG override shim
+- 602425c garnet: Import the AIDL CamX glue from PDX257
+- 5720246 garnet: Load the FourSemi fs19xx amplifier module
+- 20eb02e garnet: Load the garnet Goodix touch driver
+- dea112a garnet: Load the TIPC module
+- 285c7b1 garnet: sepolicy: Import the AGMIPC service domain
+- 33a44bf garnet: Import the stock HIDL audio userspace
+- 53ab86c garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances
+- d7dc38b garnet: sepolicy: Import the sm8750 HIDL compat policy
+- c46ed6b garnet: Import the parrot 6.6 FastRPC, DSP and QSPM setup
+- 3e205c7 garnet: Load the Xiaomi hwid module in first stage
+- 916fbcd garnet: Import the parrot 6.6 display HALs
+- 2e0497d garnet: Save the boot logs in the oops and minidump partitions
+- 95a032a garnet: Honor Xiaomi CamX stream format overrides
+- 92bc986 garnet: Provide the legacy CamX JPEG override symbol
+- c6fc5a9 Welcome to 6.6
+- 542c295 garnet: Enable R8 optimizations for system_server and SystemUI
+- 3ad49a0 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
+- d6df249 garnet: Add missing RKPD props from stock rom
+- 264a56d garnet: Adapt for universal tree
 - 3bc68f2 garnet: props: enable display idle timers
 - 2ec3727 garnet: power: tune powerhint for battery
 
 ### vendor_xiaomi_garnet
 
-- No new commits.
+- d285e6e garnet: Route the camera.qcom.so CamX format lookup through the shim
+- a9519b2 garnet: Use the stock display ids for the display configs
+- b677749 garnet: Import the AIDL Codec2 video HAL from PDX257
+- 21dbaa8 garnet: Link the legacy CamX JPEG override shim
+- 56c58af garnet: Import the AIDL CamX glue from PDX257
+- 3ced543 garnet: Import the stock HIDL audio userspace
+- b5d3479 garnet: Import the PAL and AGMIPC HIDL interface libraries
+- bb47656 garnet: Import the parrot 6.6 Adreno, FastRPC, DSP and QSPM blobs
+- 4c78d34 garnet: Import the parrot 6.6 display blobs
+- 66fde04 garnet: Initial 6.6
 
 ### device_xiaomi_garnet-miuicamera
 
-- No new commits.
+- 48d41d8 Update MIUI Gallery and MediaEditor permissions
+- d1faacd Add permissions
+- fa53b26 garnet: Add MiScanner
 
 ### vendor_xiaomi_garnet-miuicamera
 
-- No new commits.
+- 3c45191 Add MIUI Scanner, Gallery and Editor
 
 ### hardware_dolby
 
-- No new commits.
+- eaebe4b dolby: sepolicy: Add AIDL rules
+- ef26603 dolby: Link source build AIDL dependencies with `vendor.dolby.media.c2@1.0-service`
+- 0a63761 dolby: Link source build AIDL dependencies with dolby vision
+- e075d08 dolby: Link Dolby vision stack with AIDL prebuilts
+- b079f73 dolby: Import AIDL prebuilts and Link with c2 Dolby
 
 ### Kernel
 
@@ -68,8 +117,7 @@
 
 ### device_xiaomi_garnet
 
-- 92f7cae garnet: fix charge limit write failure and stop mi_thermald overriding it
-- 5fea373 garnet: audio: Add ViPER4Android effect
+- No new commits.
 
 ### vendor_xiaomi_garnet
 
@@ -136,7 +184,7 @@
 
 ### device_xiaomi_garnet
 
-- 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
+- No new commits.
 
 ### vendor_xiaomi_garnet
 
@@ -283,8 +331,6 @@
 ### device_xiaomi_garnet
 
 - d260e0e garnet: Prefer HW codecs for video thumbnails
-- ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
-- d619524 garnet: Add missing RKPD props from stock rom
 
 ### vendor_xiaomi_garnet
 
