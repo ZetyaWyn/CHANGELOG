@@ -30,10 +30,22 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add CHANGELOG.md .last_shas.json
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
+          for attempt in 1 2 3 4 5; do
+            git add CHANGELOG.md .last_shas.json
+            if git diff --cached --quiet; then
+              echo "No changes to commit"
+              exit 0
+            fi
             git commit -m "chore: update changelog [skip ci]"
-            git push
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); resyncing with origin/main and regenerating"
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/generate_changelog.py
+            sleep $((attempt * 3))
+          done
+          echo "Giving up after 5 attempts"
+          exit 1
+          
