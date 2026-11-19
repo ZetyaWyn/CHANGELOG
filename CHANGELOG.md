@@ -1,11 +1,42 @@
 # Changelog
 
+## 2026-11-19
+
+### device_xiaomi_garnet
+
+- f20a9f8 garnet: BoardConfig: drop libion include and rmnetctl soong config for A16
+- 1a65ee6 garnet: fix charge limit write failure and stop mi_thermald overriding it
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-18
 
 ### device_xiaomi_garnet
 
 - 631d580 garnet: props: Select AIDL for Codec2 HAL
-- 8a8812c garnet: fix charge limit write failure and stop mi_thermald overriding it
 - 2757503 garnet: audio: Add ViPER4Android effect
 - 5c01210 garnet: Route the camera.qcom.so CamX format lookup through the shim
 - 7ee37f9 garnet: Declare the HIDL gralloc 4.0 mapper
