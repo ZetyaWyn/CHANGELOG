@@ -1,5 +1,88 @@
 # Changelog
 
+## 2026-11-20
+
+### device_xiaomi_garnet
+
+- cd3c35b garnet: sepolicy: Update alarm AIDL service
+- aed332e garnet: props: enable display idle timers
+
+### vendor_xiaomi_garnet
+
+- 1038026 garnet: Route the camera.qcom.so CamX format lookup through the shim
+- 4fff96d garnet: Use the stock display ids for the display configs
+- a3604d4 garnet: Import the AIDL Codec2 video HAL from PDX257
+- 74580da garnet: Link the legacy CamX JPEG override shim
+- 64fb7bb garnet: Import the AIDL CamX glue from PDX257
+- 3e53c32 garnet: Import the stock HIDL audio userspace
+- 287f3d1 garnet: Import the PAL and AGMIPC HIDL interface libraries
+- 3a3cf65 garnet: Import the parrot 6.6 Adreno, FastRPC, DSP and QSPM blobs
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- ca43406 Update README.mkdn
+- 18fb338 dolby: Add AIDL c2 dolby instance to framework matrix
+- 8242859 dolby: sepolicy: Add vendor_dolbyv_prop
+- 2ac3634 dolby: Add xiaomi param storage libs for libhwdap
+- 6e315f8 dolby: Drop 32-bit prebuilts
+- 5855846 dolby: Update to Lunaris Dolby and fix DSPVolumeSynchronizer Memory leak
+- a9794e1 dolby: Update Dolby configuration and remove DAX apps
+- c650b00 dolby: use stock dolby vision cfg
+- 6b61f7c dolby: Link source build AIDL dependencies with `vendor.dolby.media.c2@1.0-service`
+- 4276d77 dolby: Link source build AIDL dependencies with dolby vision
+- 0dd9424 dolby: sepolicy: Add AIDL rules
+- 0b25943 dolby: Link Dolby vision stack with AIDL prebuilts
+- 7e8628e dolby: Import AIDL prebuilts and Link with c2 Dolby
+- 6126d4e dolby: Link libswdap and libdlbvol with libspatializerparamstorage
+- 3a889ec dolby: Move Spatial props to system_ext
+- 2ad7088 dolby: Update readme
+- 7830b26 dolby: Update Dolby volume listener stack
+- 866ffbf dolby: Add Standalone Dolby Spatial Audio support
+- f005578 dolby: sepolicy: Initial rules for DVS
+- 01be966 dolby: Add Dolby vision Service support
+- 934cf7a dolby: Switch to Newer Standalone Dolby Vision Stack taken from A16
+- 90deb7e dolby: Patch libdolbyvision.so to allocate GraphicBuffer with new size
+- 918e361 dolby: Move Spatial props to vendor
+- ef03145 dolby: Forcefully Enable bass-enhancer
+- 4ad088a dolby: Update Dolby Vision stack from a
+- 8066a14 dolby: Update dolby vision decoders
+- d34d0a6 dolby: Add dolby vision decoders
+- a1b77fa dolby: Fixup dolby c2 for Dolby Vision
+- 947f56c dolby: Add support for Dolby Vision
+- a57aa6c dolby: Fixup dax-default-spatializer.xml path
+- d3f5a67 dolby: DSPVolumeSynchronizer: Migrate to `privapp_allowlist`
+- ed52f71 dolby: DSPVolumeSynchronizer: Add icon
+- bead24a dolby: Update readme For Spatial Audio
+- 6dc6350 dolby: Import dax-default's from Motorola
+- ebf34ff dolby: Update dolby blobs from pdx237
+- 29de722 dolby: Set compatibility matrix version 4.0 > 1.0
+- d1202ad dolby: Upgrade to Newer Sony Dolby Atoms Stack
+- f0ef195 dolby: Move manifest to blueprint
+- 7d1caed dolby: Create missing dolby related directory
+- 74253bd dolby: Patch vendor.dolby.media.c2@1.0-service with libshim_dolby
+- 5f71cec dolby: configs: Enable ac4
+- eec34ea dolby: Switch to OnePlus Interface
+- e8daa70 dolby: configs: Rework on dax-default
+- 33a7a95 dolby: Enable ELF checks for libspatialaudio
+- 93140ac dolby: Link dolby blobs against v33 libstagefright_foundation
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-19
 
 ### device_xiaomi_garnet
@@ -69,19 +152,10 @@
 - 3ad49a0 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
 - d6df249 garnet: Add missing RKPD props from stock rom
 - 264a56d garnet: Adapt for universal tree
-- 3bc68f2 garnet: props: enable display idle timers
 - 2ec3727 garnet: power: tune powerhint for battery
 
 ### vendor_xiaomi_garnet
 
-- d285e6e garnet: Route the camera.qcom.so CamX format lookup through the shim
-- a9519b2 garnet: Use the stock display ids for the display configs
-- b677749 garnet: Import the AIDL Codec2 video HAL from PDX257
-- 21dbaa8 garnet: Link the legacy CamX JPEG override shim
-- 56c58af garnet: Import the AIDL CamX glue from PDX257
-- 3ced543 garnet: Import the stock HIDL audio userspace
-- b5d3479 garnet: Import the PAL and AGMIPC HIDL interface libraries
-- bb47656 garnet: Import the parrot 6.6 Adreno, FastRPC, DSP and QSPM blobs
 - 4c78d34 garnet: Import the parrot 6.6 display blobs
 - 66fde04 garnet: Initial 6.6
 
@@ -97,11 +171,7 @@
 
 ### hardware_dolby
 
-- eaebe4b dolby: sepolicy: Add AIDL rules
-- ef26603 dolby: Link source build AIDL dependencies with `vendor.dolby.media.c2@1.0-service`
-- 0a63761 dolby: Link source build AIDL dependencies with dolby vision
-- e075d08 dolby: Link Dolby vision stack with AIDL prebuilts
-- b079f73 dolby: Import AIDL prebuilts and Link with c2 Dolby
+- No new commits.
 
 ### Kernel
 
