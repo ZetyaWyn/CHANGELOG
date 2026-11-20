@@ -4,6 +4,12 @@
 
 ### device_xiaomi_garnet
 
+- 3bc68f2 garnet: props: enable display idle timers
+- 92f7cae garnet: fix charge limit write failure and stop mi_thermald overriding it
+- 5fea373 garnet: audio: Add ViPER4Android effect
+- 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
+- ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
+- d619524 garnet: Add missing RKPD props from stock rom
 - b424b99 sepolicy: Fix IMS factory hwservice declaration
 - dfb2756 garnet: Drop Dolby Vision
 - b9d830b garnet: Import the AIDL Codec2 video HAL from PDX257
@@ -14,7 +20,6 @@
 - 08f50ad garnet: sepolicy: hal_fingerprint: allow vendor system property access
 - b6d33c1 garnet: sepolicy: hal_fingerprint: allow map of vendor_system_prop
 - cd3c35b garnet: sepolicy: Update alarm AIDL service
-- aed332e garnet: props: enable display idle timers
 
 ### vendor_xiaomi_garnet
 
@@ -38,6 +43,163 @@
 
 ### hardware_dolby
 
+- f6d9229 dolby: disable volume leveler by default
+- c64c931 dolby: Import DAX config from Sony PDX245
+- 6bfc170 dolby: Add DSEE audio enhancement
+- 2d673f1 dolby: Add contributors
+- 51fb13b dolby: Simplify translation contributor definitions
+- 4afd325 dolby: Add stacked animated avatars with multi-contributor support
+- 66f79db dolby: Fetch contributor profile pictures from GitHub
+- 19f76d6 dolby: Use 2-column grid for translation contributors
+- a2f629d dolby: Add callout to contribute translations in Credits dialog
+- d5ffae2 dolby: Add translation contributors to Credits dialog
+- 75db21a dolby: add VINTF manifest and framework compatibility matrix
+- c31e60c dolby: DSPVolumeSynchronizer: Migrate to `privapp_allowlist`
+- f6ac0df dolby: DSPVolumeSynchronizer: Add icon
+- d66d808 dolby: Implement DSPVolumeSynchronizer
+- 7626929 dolby: update dax profiles and codec capabilities
+- 91d8473 dolby: use stock dolby vision cfg
+- 89bc96b dolby: Apply Dolby profiles only to compatible audio routes.
+- 577722b dolby: Implement AutoEQ headphone correction profiles
+- 339a0ee dolby: sepolicy: allow hal_dms_default to access vendor_audio_prop
+- efc50d6 dolby: Implement swipe navigation between main screens
+- 0d36cc6 dolby: Use CLICK haptic instead of DOUBLE_CLICK
+- bb21749 Dolby: Enable R8 optimization
+- 1a98278 Updated Polish translation
+- f35a71e dolby: Check and dismiss notification listener card if perm granted
+- 9a0c318 dolby: Patch libdolbyvision.so to allocate GraphicBuffer with new size
+- 41a614b dolby: Add support for Dolby Vision
+- d3d4698 Add device state memory strings for Indonesian localization
+- 915dd1b Add device state memory strings for Turkish localization
+- ea92cfd Add device state memory strings for Russian localization
+- b13a6de dolby: Make per-device audio memory configurable
+- b54f476 dolby: Fix permission issue
+- 66d50f7 dolby: Add per-device Dolby state memory
+- 9bf4f70 dolby: Add Turkish translation
+- 744cbcc dolby: Update Traditional Chinese translations
+- 91ebf26 dolby: Add Traditional Chinese translations
+- e762cbc Move Polish translation to correct directory
+- 7b77bba dolby: Add Polish translation
+- 5751b72 dolby: Add `privapp-permissions-dolby.xml` as a dependency
+- f822efa dolby: Whitelist permissions for Dolby
+- 32de95a dolby: Add Indonesian localization
+- 6186f5c dolby: Implement bottom gradient scrim
+- f66f789 dolby: Move Per-app audio profile to home settings
+- 2293d61 dolby: Switch to toobar instead of navbar
+- fe13dd0 dolby: added ru localization
+- 1ae3628 Revert "dolby: add missing software codec Attribute"
+- 42713b2 update dax
+- 2e93338 dolby: Separate volume leveler from audio tuning
+- 937c72b dolby: Introduce mid-frequency enhancer
+- db428b0 dolby: replace legacy Divider with Material3 HorizontalDivider
+- 902be88 dolby: Fix profile and settings restore after audio focus loss
+- d270043 dolby: Externalize UI strings for localization support
+- 1c95d23 dolby: Allow hal_dms_default to connect to property socket
+- ab62d09 dolby: Prevent profile reset in AppProfileMonitorService
+- f45d145 dolby: Simple name better
+- 9eca7b7 dolby: Add Credits & Contributors dialog
+- 27d05ea dolby: Use accent color for dolby icon bg
+- 2d7841a dolby: Switch to material 3 expressive color specs
+- cff900e dolby: Add delete option for presets in import/export menu
+- bdef22c dolby: Fix preset not loading with its original band mode
+- 579260b dolby: Fix volume leveler not reading config
+- 68054a8 dolby: Move notification listener permission card to home screen
+- 7d314c2 dolby: Restore all profile settings on device boot
+- 4f80cbb dolby: Fix navbar style
+- 11a8adb dolby: Add headphone-only mode for per-app audio profiles
+- acc1f1a dolby: Saftey threads and memory leak fix
+- 01eeebb dolby: Add lifecycle management and resource cleanup
+- b5d693a dolby: Implement Notification Listener for always-on Dolby service
+- 9889109 dolby: Remove legacy vibrator fallback check
+- 5c0b025 dolby: Use Material 3 Expressive motion specs
+- fd516e5 dolby: Fix background color in light mode
+- 278b17e dolby: Fix Band mode compatibility and array bounds crashes
+- 95281a5 dolby: Prevent editing presets with mismatched band modes
+- f64689f dolby: Fix bottom navbar overlap issue
+- 700575a dolby: Add tile squish effect
+- 96341f3 dolby: Enhance Switch UI with animated icons
+- b906be3 dolby: Use neutral color for settings bg
+- ecd925b dolby: Remove unnecessary GZIP compression from preset import/export
+- 9c334b7 dolby: Add missing icon for Preset and Equalizer View
+- 6aebff8 dolby: Extend equalizer frequency range and add configurable band modes
+- eeb104f dolby: Introduce preset import/export support
+- c4c5668 dolby: Implement haptic feedback
+- 0d664c2 dolby: Only show toast for apps with assigned profiles
+- 9481b3b dolby: Implement per-app profile management
+- 873fdd3 dolby: Add 3 new profiles
+- f2c74ae dolby: Fix preset now switching when switch profile
+- 28ec608 dolby: Update Dolby icon
+- d0e960b dolby: Fix equ curve bright bg color
+- a318b22 dolby: Add view mode toggle for equalizer interface
+- c39a6ae dolby: Improve equalizer curve touch responsiveness
+- 267c2fa dolby: Fix equalizer preset detection and matching
+- 3aa7258 dolby: Improve bottom navbar design
+- ed4b480 dolby: Dynamic tile and switch shape
+- be2b3ef dolby: Fix equ interface
+- 9bba67c dolby: Redesign dolby interface
+- 5c91dcd dolby: Add Carousel Profile Selector
+- 0bdd102 dolby: Added border stroke to selected profile option
+- bc8daa9 dolby: Switch to interactive frequency response curve
+- 3b85fb2 dolby: add selectable bass curves and curve-based EQ processing
+- 32b1e6a dolby: enhance audio controls with treble tuning
+- c0e14ef dolby: add new EQ presets and extend gain range to ±15dB
+- 336e88e dolby: Add bass control slider
+- 5db10db dolby: Complete rewrite DolbyManager in Jetpack Compose Signed-off-by: Ghosuto <clash.raja10@gmail.com> Signed-off-by: Pabloescobar-reborn <pabloescobarreborn07@gmail.com>
+- 13c32ef dolby: Use new material expressive design for settings preferences
+- 0e03fff dolby: add missing software codec Attribute
+- fe94e80 Merge pull request #1 from DqrKnzx/16
+- 944a468 dolby: fix attributes and tags in dax_default.xml
+- 63bcd89 dolby: fixup voice profile
+- de23ccc dolby: update `dax-default.xml`
+- 088743a dolby: Do not conditionally disable prefs on speaker
+- 0353d1e dolby: Allow force disabling volume leveler
+- fbb15cb dolby: Avoid hardcoded strings for custom preset
+- 67eed6a dolby: Move to device encrypted storage
+- 40fe685 dolby: Move effect strength settings to sliders
+- 60ed7e0 dolby: Hide advanced settings in dynamic profile
+- 858790d dolby: Add a menu button to reset all profiles
+- 31d7175 fixup! dolby: Add intelligent equalizer setting
+- d40e763 fixup! dolby: Use index of value for selecting ieq icon
+- 4920046 dolby: Fix compilation error in TooltipIconButton
+- c3f3a11 dolby: Use index of value for selecting ieq icon
+- 753b34e dolby: Allow disabling stereo widening levels
+- 05ca7c6 dolby: Enable bass enhancer on loudspeaker too
+- a4cd52a dolby: Properly update profile preference summary
+- b8e001e dolby: Add support for `Custom` profile
+- 440bb65 dolby: Update EqualizerScreen background color for 15
+- b27a259 dolby: Remove deprecated PlainTooltipBox
+- d43556f dolby: Fix build with kotlinc 1.9.0
+- 9390884 dolby: Convert to SwitchPreferenceCompat
+- 600851e dolby: Migrate to CompoundButton.OnCheckedChangeListener
+- ca33c4d dolby: Replace widget.R with collapsingtoolbar.R
+- 6db983a dolby: Make sure to persist value after toggling QS tile
+- 318f0ea dolby: Add intelligent equalizer setting
+- b44187e dolby: Introduce graphical equalizer
+- 14efd18 dolby: Add launcher icon
+- 4f1393f fixup! dolby: Restore all settings upon bootup
+- 4774c82 dolby: Restore current profile _after_ resetting profiles
+- 7a1ef57 dolby: Do not set volume leveler amount
+- e92669b dolby: Restore all settings upon bootup
+- 586755d dolby: Rewrite in Kotlin
+- 863fce3 dolby: Revert "Re-enable speaker virtualization after bootup"
+- 5ab1d96 dolby: Introduce Dolby Atmos
+- 1d06c0b dolby: Yeet Motorola Dolby Interface
+- 708a47b dolby: Update readme
+- 892caad dolby: Switch to AOSPA Dolby Atmos
+- 6b1bb6b dolby: Create missing dolby related directory
+- 0475f7e FCM: moved to dt to fix kernel target issue
+- 0e837f8 Revert "dolby: Implement DSPVolumeSynchronizer"
+- 263ba11 dolby: Rework on dax-default
+- 54da022 dolby: configs: Rework on dax-default
+- 4f911dd dolby: Update MotoDolbyDax3.apk [White icon]
+- a4f8660 dolby: Patch vendor.dolby.media.c2@1.0-service with libshim_dolby
+- 187c007 dolby: configs: Enable ac4
+- e2df31f dolby: Enable ELF checks for libspatialaudio
+- 10d3ac3 dolby: Link dolby blobs against v33 libstagefright_foundation
+- 0ea2536 dolby: configs: Kang dax-default from https://github.com/reiryuki/Dolby-Atmos-Spatial-Sound-Moto-Edge-30-Ultra-Magisk-Module
+- 8995c02 dolby: Kang daxService.apk and MotoDolbyDax3.apk
+- 1c967d1 dolby: permissions: Kang privapp-com.motorola.dolby.dolbyui.xml
+- 82e51d2 dolby: Switch to Motorola Dolby Interface
 - 70b6398 Update README.mkdn
 - 1e8125a dolby: Add AIDL c2 dolby instance to framework matrix
 - 312f3f0 dolby: sepolicy: Add vendor_dolbyv_prop
@@ -45,7 +207,6 @@
 - 6e315f8 dolby: Drop 32-bit prebuilts
 - 5855846 dolby: Update to Lunaris Dolby and fix DSPVolumeSynchronizer Memory leak
 - a9794e1 dolby: Update Dolby configuration and remove DAX apps
-- c650b00 dolby: use stock dolby vision cfg
 - 6b61f7c dolby: Link source build AIDL dependencies with `vendor.dolby.media.c2@1.0-service`
 - 4276d77 dolby: Link source build AIDL dependencies with dolby vision
 - 0dd9424 dolby: sepolicy: Add AIDL rules
@@ -53,36 +214,25 @@
 - 7e8628e dolby: Import AIDL prebuilts and Link with c2 Dolby
 - 6126d4e dolby: Link libswdap and libdlbvol with libspatializerparamstorage
 - 3a889ec dolby: Move Spatial props to system_ext
-- 2ad7088 dolby: Update readme
 - 7830b26 dolby: Update Dolby volume listener stack
 - 866ffbf dolby: Add Standalone Dolby Spatial Audio support
 - f005578 dolby: sepolicy: Initial rules for DVS
 - 01be966 dolby: Add Dolby vision Service support
 - 934cf7a dolby: Switch to Newer Standalone Dolby Vision Stack taken from A16
-- 90deb7e dolby: Patch libdolbyvision.so to allocate GraphicBuffer with new size
 - 918e361 dolby: Move Spatial props to vendor
 - ef03145 dolby: Forcefully Enable bass-enhancer
 - 4ad088a dolby: Update Dolby Vision stack from a
 - 8066a14 dolby: Update dolby vision decoders
 - d34d0a6 dolby: Add dolby vision decoders
 - a1b77fa dolby: Fixup dolby c2 for Dolby Vision
-- 947f56c dolby: Add support for Dolby Vision
 - a57aa6c dolby: Fixup dax-default-spatializer.xml path
-- d3f5a67 dolby: DSPVolumeSynchronizer: Migrate to `privapp_allowlist`
-- ed52f71 dolby: DSPVolumeSynchronizer: Add icon
 - bead24a dolby: Update readme For Spatial Audio
 - 6dc6350 dolby: Import dax-default's from Motorola
 - ebf34ff dolby: Update dolby blobs from pdx237
 - 29de722 dolby: Set compatibility matrix version 4.0 > 1.0
 - d1202ad dolby: Upgrade to Newer Sony Dolby Atoms Stack
 - f0ef195 dolby: Move manifest to blueprint
-- 7d1caed dolby: Create missing dolby related directory
-- 74253bd dolby: Patch vendor.dolby.media.c2@1.0-service with libshim_dolby
-- 5f71cec dolby: configs: Enable ac4
 - eec34ea dolby: Switch to OnePlus Interface
-- e8daa70 dolby: configs: Rework on dax-default
-- 33a7a95 dolby: Enable ELF checks for libspatialaudio
-- 93140ac dolby: Link dolby blobs against v33 libstagefright_foundation
 
 ### Kernel
 
@@ -98,7 +248,6 @@
 ### device_xiaomi_garnet
 
 - f20a9f8 garnet: BoardConfig: drop libion include and rmnetctl soong config for A16
-- 1a65ee6 garnet: fix charge limit write failure and stop mi_thermald overriding it
 
 ### vendor_xiaomi_garnet
 
@@ -130,7 +279,6 @@
 ### device_xiaomi_garnet
 
 - 631d580 garnet: props: Select AIDL for Codec2 HAL
-- 2757503 garnet: audio: Add ViPER4Android effect
 - 5c01210 garnet: Route the camera.qcom.so CamX format lookup through the shim
 - 7ee37f9 garnet: Declare the HIDL gralloc 4.0 mapper
 - 6850ead garnet: modules: Load mi_thermal_interface
@@ -157,9 +305,6 @@
 - 95a032a garnet: Honor Xiaomi CamX stream format overrides
 - 92bc986 garnet: Provide the legacy CamX JPEG override symbol
 - c6fc5a9 Welcome to 6.6
-- 542c295 garnet: Enable R8 optimizations for system_server and SystemUI
-- 3ad49a0 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
-- d6df249 garnet: Add missing RKPD props from stock rom
 - 264a56d garnet: Adapt for universal tree
 - 2ec3727 garnet: power: tune powerhint for battery
 
