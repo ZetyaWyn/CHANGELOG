@@ -4,11 +4,21 @@
 
 ### device_xiaomi_garnet
 
+- b424b99 sepolicy: Fix IMS factory hwservice declaration
+- dfb2756 garnet: Drop Dolby Vision
+- b9d830b garnet: Import the AIDL Codec2 video HAL from PDX257
+- e793efb Revert "garnet: Move c2_manifest_vendor.xml to device tree"
+- 3d8b410 Revert "garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances"
+- 6909d09 garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances
+- 09df3ca garnet: sepolicy: allow vendor_hal_usb_qti to read sysfs_udc
+- 08f50ad garnet: sepolicy: hal_fingerprint: allow vendor system property access
+- b6d33c1 garnet: sepolicy: hal_fingerprint: allow map of vendor_system_prop
 - cd3c35b garnet: sepolicy: Update alarm AIDL service
 - aed332e garnet: props: enable display idle timers
 
 ### vendor_xiaomi_garnet
 
+- 12e26fd vendor: garnet: Allow undefined symbols in adpl and netmgrd
 - 1038026 garnet: Route the camera.qcom.so CamX format lookup through the shim
 - 4fff96d garnet: Use the stock display ids for the display configs
 - a3604d4 garnet: Import the AIDL Codec2 video HAL from PDX257
@@ -28,9 +38,9 @@
 
 ### hardware_dolby
 
-- ca43406 Update README.mkdn
-- 18fb338 dolby: Add AIDL c2 dolby instance to framework matrix
-- 8242859 dolby: sepolicy: Add vendor_dolbyv_prop
+- 70b6398 Update README.mkdn
+- 1e8125a dolby: Add AIDL c2 dolby instance to framework matrix
+- 312f3f0 dolby: sepolicy: Add vendor_dolbyv_prop
 - 2ac3634 dolby: Add xiaomi param storage libs for libhwdap
 - 6e315f8 dolby: Drop 32-bit prebuilts
 - 5855846 dolby: Update to Lunaris Dolby and fix DSPVolumeSynchronizer Memory leak
@@ -139,7 +149,6 @@
 - dea112a garnet: Load the TIPC module
 - 285c7b1 garnet: sepolicy: Import the AGMIPC service domain
 - 33a44bf garnet: Import the stock HIDL audio userspace
-- 53ab86c garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances
 - d7dc38b garnet: sepolicy: Import the sm8750 HIDL compat policy
 - c46ed6b garnet: Import the parrot 6.6 FastRPC, DSP and QSPM setup
 - 3e205c7 garnet: Load the Xiaomi hwid module in first stage
