@@ -1,11 +1,44 @@
 # Changelog
 
+## 2026-11-21
+
+### device_xiaomi_garnet
+
+- 67f399c garnet: props: enable display idle timers
+- 5b4c778 garnet: power: tune powerhint for battery
+- a67aed2 garnet: Increase priority of OpenDeltaOverlayGarnet
+- 30de7f0 garnet: Support A/B perf mode
+- 44f5f9a garnet: fix charge limit write failure and stop mi_thermald overriding it
+
+### vendor_xiaomi_garnet
+
+- No new commits.
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- No new commits.
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-20
 
 ### device_xiaomi_garnet
 
-- 3bc68f2 garnet: props: enable display idle timers
-- 92f7cae garnet: fix charge limit write failure and stop mi_thermald overriding it
 - 5fea373 garnet: audio: Add ViPER4Android effect
 - 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
 - ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
@@ -306,7 +339,6 @@
 - 92bc986 garnet: Provide the legacy CamX JPEG override symbol
 - c6fc5a9 Welcome to 6.6
 - 264a56d garnet: Adapt for universal tree
-- 2ec3727 garnet: power: tune powerhint for battery
 
 ### vendor_xiaomi_garnet
 
@@ -340,8 +372,7 @@
 
 ### device_xiaomi_garnet
 
-- f294fef garnet: Increase priority of OpenDeltaOverlayGarnet
-- ed4f2ac garnet: Support A/B perf mode
+- No new commits.
 
 ### vendor_xiaomi_garnet
 
