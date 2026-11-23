@@ -1,14 +1,96 @@
 # Changelog
 
+## 2026-11-23
+
+### device_xiaomi_garnet
+
+- 2c473c2 garnet: sepolicy: use vendor_hal_alarm_qti_aidl_service for IAlarm
+- d183d19 garnet: Route the camera.qcom.so CamX format lookup through the shim
+- 9cb2e51 garnet: Declare the HIDL gralloc 4.0 mapper
+- 82aa07e garnet: modules: Load mi_thermal_interface
+- b7210e3 garnet: modules: Load qti_battery_charger_main
+- 30e4581 garnet: Use the stock display ids for the display configs
+- f42db9b garnet: Keep unused clocks and power domains enabled
+- b1266b2 garnet: Drop Dolby Vision
+- 84b23c1 garnet: Import the AIDL Codec2 video HAL from PDX257
+- def1942 garnet: Build and load the NXP NFC driver
+- fa99882 garnet: sepolicy: Let the camera provider use QSPM
+- 4d2e53d garnet: sepolicy: Resolve the sm8750 neverallows
+- b57b2d6 garnet: udfps: Use the local HBM sysfs nodes of the display driver
+- ac83956 garnet: sepolicy: Label the panel cell id and panel info nodes
+- 4694dcc garnet: Link the legacy CamX JPEG override shim
+- 74f17e8 garnet: Import the AIDL CamX glue from PDX257
+- 4cbb141 garnet: Load the FourSemi fs19xx amplifier module
+- 916cce9 garnet: Load the garnet Goodix touch driver
+- 6c57ec7 garnet: Load the TIPC module
+- b318e5b garnet: sepolicy: Import the AGMIPC service domain
+- 6579424 garnet: Import the stock HIDL audio userspace
+- 2278ce6 garnet: Fix the extract-files.py syntax error
+- 82183e9 garnet: sepolicy: Import the sm8750 HIDL compat policy
+- 53171bb garnet: Import the parrot 6.6 FastRPC, DSP and QSPM setup
+- 4df0bb6 garnet: Load the Xiaomi hwid module in first stage
+- d6da488 garnet: Import the parrot 6.6 display HALs
+- 1c95ea2 garnet: Save the boot logs in the oops and minidump partitions
+- d12c255 garnet: Honor Xiaomi CamX stream format overrides
+- 5ea9fdf garnet: Provide the legacy CamX JPEG override symbol
+- 78d2432 Welcome to 6.6
+- 63f816e garnet: props: enable display idle timers
+- e8f1638 garnet: power: tune powerhint for battery
+- aae2e10 Revert "garnet: Move c2_manifest_vendor.xml to device tree"
+- 0db5e77 garnet: Restart the audio HAL once when the smart PA is first detected
+- 1e34592 garnet: sepolicy: allow system server to write securityfs
+- 851ac86 garnet: Drop BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT
+- 400b876 garnet: fstab: Drop AVB keys
+- 360938f garnet: Shim tee blobs with libion_shim
+- 8efad8b garnet: sepolicy: define vendor poweroffalarm app
+- c20a94b garnet: parts: thermal: Fix unresolved DefaultDialerManager reference
+- a18bb9c garnet: miuicamera: sepolicy platform_app -> platform_app_36
+- d1dd513 garnet: fastbootd is now enabled by default
+- 5bfa9f2 garnet: updating the manifest target level to 7
+- d6f2347 garnet: sepolicy: Associate eSimSwitcher app to coredomain
+- 0e915a8 garnet: power-libperfmgr: Update included soong namespaces
+- aa8b795 garnet: fix charge limit write failure and stop mi_thermald overriding it
+- fcc786f garnet: audio: Add ViPER4Android effect
+- 542c295 garnet: Enable R8 optimizations for system_server and SystemUI
+- 3ad49a0 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
+- d6df249 garnet: Add missing RKPD props from stock rom
+
+### vendor_xiaomi_garnet
+
+- ddb5d62 garnet: Shim tee blobs with libion_shim
+- 357f991 sm8450-common: Load the unbindable ports shim in netmgrd
+- d772d35 garnet: vintf: fix AIDL c2 manifest
+- ab6f092 garnet: Switch Codec2 HAL from HIDL to AIDL
+- 958062d Revert "vendor: drop C2"
+
+### device_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### vendor_xiaomi_garnet-miuicamera
+
+- No new commits.
+
+### hardware_dolby
+
+- f2f843d dolby: Drop Dolby Vision for the kernel 6.6 trees
+- 4260097 dolby: disable volume leveler by default
+
+### Kernel
+
+- [android_kernel_xiaomi_sm7435](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435/commits/16.2/)
+
+### Kernel Modules
+
+- [android_kernel_xiaomi_sm7435-modules](https://github.com/project-sm7435/android_kernel_xiaomi_sm7435-modules/commits/lineage-23.2/)
+
+
 ## 2026-11-21
 
 ### device_xiaomi_garnet
 
-- 67f399c garnet: props: enable display idle timers
-- 5b4c778 garnet: power: tune powerhint for battery
 - a67aed2 garnet: Increase priority of OpenDeltaOverlayGarnet
 - 30de7f0 garnet: Support A/B perf mode
-- 44f5f9a garnet: fix charge limit write failure and stop mi_thermald overriding it
 
 ### vendor_xiaomi_garnet
 
@@ -39,14 +121,7 @@
 
 ### device_xiaomi_garnet
 
-- 5fea373 garnet: audio: Add ViPER4Android effect
-- 1f3f338 garnet: Enable R8 optimizations for system_server and SystemUI
-- ebd0842 garnet: Drop add_power_save (already set in vendor) and silence noisy log tags
-- d619524 garnet: Add missing RKPD props from stock rom
 - b424b99 sepolicy: Fix IMS factory hwservice declaration
-- dfb2756 garnet: Drop Dolby Vision
-- b9d830b garnet: Import the AIDL Codec2 video HAL from PDX257
-- e793efb Revert "garnet: Move c2_manifest_vendor.xml to device tree"
 - 3d8b410 Revert "garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances"
 - 6909d09 garnet: configs: hidl: Switch C2 HAL to AIDL and drop unused instances
 - 09df3ca garnet: sepolicy: allow vendor_hal_usb_qti to read sysfs_udc
@@ -76,7 +151,6 @@
 
 ### hardware_dolby
 
-- f6d9229 dolby: disable volume leveler by default
 - c64c931 dolby: Import DAX config from Sony PDX245
 - 6bfc170 dolby: Add DSEE audio enhancement
 - 2d673f1 dolby: Add contributors
@@ -312,32 +386,6 @@
 ### device_xiaomi_garnet
 
 - 631d580 garnet: props: Select AIDL for Codec2 HAL
-- 5c01210 garnet: Route the camera.qcom.so CamX format lookup through the shim
-- 7ee37f9 garnet: Declare the HIDL gralloc 4.0 mapper
-- 6850ead garnet: modules: Load mi_thermal_interface
-- 4c38794 garnet: modules: Load qti_battery_charger_main
-- d7bb1b6 garnet: Use the stock display ids for the display configs
-- 80688e0 garnet: Keep unused clocks and power domains enabled
-- 1ca5e8a garnet: Build and load the NXP NFC driver
-- 150fbdd garnet: sepolicy: Let the camera provider use QSPM
-- 3195be5 garnet: sepolicy: Resolve the sm8750 neverallows
-- ad38b8a garnet: udfps: Use the local HBM sysfs nodes of the display driver
-- c8afd72 garnet: sepolicy: Label the panel cell id and panel info nodes
-- 994eca7 garnet: Link the legacy CamX JPEG override shim
-- 602425c garnet: Import the AIDL CamX glue from PDX257
-- 5720246 garnet: Load the FourSemi fs19xx amplifier module
-- 20eb02e garnet: Load the garnet Goodix touch driver
-- dea112a garnet: Load the TIPC module
-- 285c7b1 garnet: sepolicy: Import the AGMIPC service domain
-- 33a44bf garnet: Import the stock HIDL audio userspace
-- d7dc38b garnet: sepolicy: Import the sm8750 HIDL compat policy
-- c46ed6b garnet: Import the parrot 6.6 FastRPC, DSP and QSPM setup
-- 3e205c7 garnet: Load the Xiaomi hwid module in first stage
-- 916fbcd garnet: Import the parrot 6.6 display HALs
-- 2e0497d garnet: Save the boot logs in the oops and minidump partitions
-- 95a032a garnet: Honor Xiaomi CamX stream format overrides
-- 92bc986 garnet: Provide the legacy CamX JPEG override symbol
-- c6fc5a9 Welcome to 6.6
 - 264a56d garnet: Adapt for universal tree
 
 ### vendor_xiaomi_garnet
